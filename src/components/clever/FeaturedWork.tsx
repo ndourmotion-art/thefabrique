@@ -36,7 +36,7 @@ const ProjectCard = ({
   const frameRef = useRef<HTMLIFrameElement | null>(null);
   const timerRef = useRef<number | null>(null);
 
-  // Boucle de 3 secondes : on revient au début toutes les 3s
+  // 3-second loop: restart from the beginning every 3s
   useEffect(() => {
     if (!hovered || !vimeoId) return;
     timerRef.current = window.setInterval(() => {
