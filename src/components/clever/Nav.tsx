@@ -4,10 +4,10 @@ import logo from "@/assets/cleverafrica-logo.png";
 import { cn } from "@/lib/utils";
 
 const links = [
-  { label: "Réalisations", href: "#work" },
+  { label: "Work", href: "#work" },
   { label: "Services", href: "#services" },
   { label: "Solutions", href: "#solutions" },
-  { label: "À propos", href: "#about" },
+  { label: "About", href: "#about" },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -116,7 +116,7 @@ export const Nav = () => {
             onClick={(e) => { setOpen(false); handleClick(e, "#contact"); }}
             className="mt-2 inline-flex items-center justify-between rounded-xl bg-foreground text-background px-4 py-3 text-base font-medium"
           >
-            Demander un devis <span>→</span>
+            Request a quote <span>→</span>
           </a>
 
         </div>
