@@ -1,0 +1,199 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Cleverafrica design system — warm cream canvas, brand blue & green accents.
+   All colors MUST be HSL. */
+
+@layer base {
+  :root {
+    /* Cream/dark editorial palette */
+    --background: 44 33% 95%;         /* #F4F2EC warm cream */
+    --foreground: 0 0% 6%;            /* near-black */
+
+    --card: 44 33% 95%;
+    --card-foreground: 0 0% 6%;
+
+    --popover: 44 33% 95%;
+    --popover-foreground: 0 0% 6%;
+
+    /* Brand blue from logo */
+    --primary: 230 90% 53%;           /* #1F3DEB-ish */
+    --primary-foreground: 44 33% 97%;
+
+    /* Brand green accent from logo */
+    --accent: 150 92% 39%;            /* #08C165 */
+    --accent-foreground: 0 0% 6%;
+
+    --secondary: 44 20% 88%;
+    --secondary-foreground: 0 0% 6%;
+
+    --muted: 44 18% 86%;
+    --muted-foreground: 0 0% 30%;
+
+    --destructive: 0 84% 55%;
+    --destructive-foreground: 44 33% 97%;
+
+    --border: 0 0% 6% / 0.12;
+    --input: 0 0% 80%;
+    --ring: 230 90% 53%;
+
+    --radius: 0.75rem;
+
+    /* Surface variants */
+    --surface-dark: 0 0% 6%;
+    --surface-dark-foreground: 44 33% 95%;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 0 0% 6%;
+    --foreground: 44 33% 95%;
+    --card: 0 0% 8%;
+    --card-foreground: 44 33% 95%;
+    --popover: 0 0% 8%;
+    --popover-foreground: 44 33% 95%;
+    --primary: 230 90% 60%;
+    --primary-foreground: 0 0% 6%;
+    --accent: 150 92% 45%;
+    --accent-foreground: 0 0% 6%;
+    --secondary: 0 0% 12%;
+    --secondary-foreground: 44 33% 95%;
+    --muted: 0 0% 12%;
+    --muted-foreground: 0 0% 65%;
+    --destructive: 0 70% 45%;
+    --destructive-foreground: 44 33% 95%;
+    --border: 44 33% 95% / 0.12;
+    --input: 0 0% 18%;
+    --ring: 230 90% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Nunito Sans', system-ui, sans-serif;
+    font-feature-settings: "ss01", "cv11";
+  }
+  ::selection {
+    background: hsl(var(--accent));
+    color: hsl(var(--accent-foreground));
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: 'Nunito Sans', system-ui, sans-serif;
+    letter-spacing: -0.02em;
+    line-height: 0.88;
+    font-weight: 800;
+  }
+  .font-serif-italic {
+    font-family: 'Instrument Serif', serif;
+    font-style: italic;
+    letter-spacing: -0.01em;
+  }
+  .eyebrow {
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+  .text-display-xl {
+    font-size: clamp(3.5rem, 11vw, 11rem);
+  }
+  .text-display-lg {
+    font-size: clamp(2.5rem, 7.5vw, 7rem);
+  }
+  .text-display-md {
+    font-size: clamp(2rem, 5vw, 4.5rem);
+  }
+}
+
+/* Marquee */
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.animate-marquee {
+  animation: marquee 40s linear infinite;
+}
+.animate-marquee-fast {
+  animation: marquee 25s linear infinite;
+}
+
+/* Reveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 900ms cubic-bezier(0.2, 0.7, 0.2, 1), transform 900ms cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* Portfolio bento grid */
+.portfolio-bento {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-areas:
+    "one one two"
+    "three four five"
+    "six six six"
+    "seven nine nine"
+    "eight nine nine";
+}
+
+@media (max-width: 768px) {
+  .portfolio-bento {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "one"
+      "two"
+      "three"
+      "four"
+      "five"
+      "six"
+      "seven"
+      "eight"
+      "nine";
+  }
+}
+
+/* Reveal des textes de sections au scroll */
+.text-reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 800ms cubic-bezier(0.2, 0.7, 0.2, 1),
+    transform 800ms cubic-bezier(0.2, 0.7, 0.2, 1);
+  will-change: opacity, transform;
+}
+.text-reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  .text-reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
