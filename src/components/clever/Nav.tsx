@@ -70,7 +70,7 @@ export const Nav = () => {
         </Link>
 
         <div className="hidden md:flex">
-          <nav className="flex items-center gap-1 rounded-full border-foreground/10 bg-background/50 backdrop-blur px-2 py-1.5 border-2 opacity-85 bg-[#344256]/0">
+          <nav className="flex items-center gap-1 rounded-full border border-foreground/10 bg-background/50 backdrop-blur px-2 py-1.5 opacity-85">
             {links.map((l) => (
               <a
                 key={l.href}
