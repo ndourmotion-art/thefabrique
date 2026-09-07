@@ -123,7 +123,7 @@ export const Nav = () => {
       )}
       <div
         className={cn(
-          "fixed inset-0 z-40 pointer-events-none bg-white transition-opacity duration-300",
+          "fixed inset-0 z-40 pointer-events-none bg-background transition-opacity duration-300",
           fading ? "opacity-95" : "opacity-0"
         )}
         aria-hidden="true"
