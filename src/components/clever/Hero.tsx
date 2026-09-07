@@ -41,7 +41,7 @@ export const Hero = () => {
                 href="#work"
                 className="group inline-flex items-center gap-3 rounded-full bg-foreground text-background pl-6 pr-2 py-2 text-base font-medium hover:bg-primary transition-colors"
               >
-                Voir les projets
+                View work
                 <span className="h-9 w-9 rounded-full bg-background text-foreground flex items-center justify-center group-hover:rotate-45 transition-transform">
                   ↗
                 </span>
@@ -50,7 +50,7 @@ export const Hero = () => {
                 href="#contact"
                 className="inline-flex items-center gap-2 rounded-full bg-accent text-accent-foreground px-6 py-3 text-base font-medium hover:bg-foreground hover:text-background transition-colors"
               >
-                Demander un devis
+                Request a quote
               </a>
             </div>
           </div>

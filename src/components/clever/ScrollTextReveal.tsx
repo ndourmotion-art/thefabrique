@@ -1,8 +1,8 @@
 import { useEffect } from "react";
 
 /**
- * Anime tous les textes des sections lorsqu'ils apparaissent au scroll.
- * Aucun markup à modifier : les éléments de texte sont détectés puis observés.
+ * Animates all section text as it appears on scroll.
+ * No markup to change: text elements are detected then observed.
  */
 const SELECTOR = [
   "main section h1",

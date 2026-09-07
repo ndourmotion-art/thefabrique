@@ -1,16 +1,16 @@
 import { useReveal } from "@/hooks/useReveal";
 
 const stats = [
-  { value: "150+", label: "Projets livrés avec succès" },
-  { value: "14+", label: "Années d'expérience" },
-  { value: "6+", label: "Pays atteints" },
-  { value: "98%", label: "Taux de satisfaction client" },
+  { value: "150+", label: "Projects delivered successfully" },
+  { value: "14+", label: "Years of experience" },
+  { value: "6+", label: "Countries reached" },
+  { value: "98%", label: "Client satisfaction rate" },
 ];
 
 const testimonials = [
-  { quote: "Une équipe créative, réactive et à l'écoute.", author: "Awa D." },
-  { quote: "Un rendu au-delà de nos attentes.", author: "Moussa S." },
-  { quote: "Des idées fraîches qui font la différence.", author: "Fatou N." },
+  { quote: "A creative, responsive, and attentive team.", author: "Awa D." },
+  { quote: "A result beyond our expectations.", author: "Moussa S." },
+  { quote: "Fresh ideas that make a difference.", author: "Fatou N." },
 ];
 
 export const Stats = () => {
@@ -19,9 +19,9 @@ export const Stats = () => {
     <section id="about" className="py-24 md:py-36">
       <div className="mx-auto max-w-[1400px] px-6 lg:px-10">
         <div ref={ref} className="reveal">
-          <div className="eyebrow text-foreground/60 mb-5">À propos du studio</div>
+          <div className="eyebrow text-foreground/60 mb-5">About the studio</div>
           <h2 className="font-display uppercase text-display-lg text-7xl font-sans font-medium max-w-4xl">
-            Des nombres en <span className="font-serif-italic normal-case text-primary">mouvement</span>.
+            Numbers in <span className="font-serif-italic normal-case text-primary">motion</span>.
           </h2>
         </div>
 

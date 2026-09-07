@@ -7,7 +7,7 @@ export const Footer = () => {
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
           <img src={logo} alt="Cleverafrica" className="h-5 w-auto" />
           <div className="text-sm text-foreground/60">
-            © {new Date().getFullYear()} Cleverafrica. Tous droits réservés.
+            © {new Date().getFullYear()} Cleverafrica. All rights reserved.
           </div>
         </div>
       </div>

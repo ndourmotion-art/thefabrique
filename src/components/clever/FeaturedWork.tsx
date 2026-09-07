@@ -36,7 +36,7 @@ const ProjectCard = ({
   const frameRef = useRef<HTMLIFrameElement | null>(null);
   const timerRef = useRef<number | null>(null);
 
-  // Boucle de 3 secondes : on revient au début toutes les 3s
+  // 3-second loop: restart from the beginning every 3s
   useEffect(() => {
     if (!hovered || !vimeoId) return;
     timerRef.current = window.setInterval(() => {
@@ -113,8 +113,8 @@ export const FeaturedWork = () => {
     <section id="work" className="py-24 md:py-36">
       <div className="mx-auto max-w-[1400px] px-6 lg:px-10">
         <div ref={heading} className="reveal mb-12 md:mb-16">
-          <div className="eyebrow text-foreground/60 mb-4">Sélection</div>
-          <h2 className="font-display uppercase text-display-lg text-7xl font-sans font-medium">Nos réalisations</h2>
+          <div className="eyebrow text-foreground/60 mb-4">Selection</div>
+          <h2 className="font-display uppercase text-display-lg text-7xl font-sans font-medium">Our work</h2>
         </div>
 
         <div className="portfolio-bento">
@@ -133,7 +133,7 @@ export const FeaturedWork = () => {
             href="#work"
             className="inline-flex items-center justify-center rounded-full bg-foreground text-background px-8 py-3 text-sm md:text-base font-medium hover:bg-primary transition-colors"
           >
-            Tous les projets
+            All projects
           </a>
         </div>
       </div>

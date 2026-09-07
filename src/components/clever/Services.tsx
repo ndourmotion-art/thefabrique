@@ -8,17 +8,17 @@ import designDynamique from "@/assets/design-dynamique.jpg.asset.json";
 import designStatique from "@/assets/design-statique.jpg.asset.json";
 
 const services = [
-  { title: "ACTIVATION DE MARQUE", image: activationMarque.url },
-  { title: "BRANDING DE MARQUE", image: brandingDeMarque.url },
-  { title: "PRODUCTION & RÉALISATION", image: productionRealisation.url },
-  { title: "DESIGN DYNAMIQUE", image: designDynamique.url },
-  { title: "DESIGN STATIQUE", image: designStatique.url },
-  { title: "CONCEPTION & RÉDACTION", image: conceptionRedaction.url },
+  { title: "BRAND ACTIVATION", image: activationMarque.url },
+  { title: "BRAND IDENTITY", image: brandingDeMarque.url },
+  { title: "PRODUCTION & DIRECTION", image: productionRealisation.url },
+  { title: "DYNAMIC DESIGN", image: designDynamique.url },
+  { title: "STATIC DESIGN", image: designStatique.url },
+  { title: "CONCEPT & COPYWRITING", image: conceptionRedaction.url },
 ];
 
-// Durée d'un cycle "lumière" : fondu lent d'entrée + maintien + fondu de sortie.
-const FADE_MS = 1800;   // durée du fondu in/out
-const HOLD_MS = 1400;   // maintien à pleine luminosité
+// Duration of a "light" cycle: slow fade in + hold + fade out.
+const FADE_MS = 1800;   // fade in/out duration
+const HOLD_MS = 1400;   // hold at full brightness
 const CYCLE_MS = FADE_MS * 2 + HOLD_MS;
 
 const Card = ({
@@ -96,9 +96,9 @@ export const Services = () => {
     <section id="services" className="bg-surface-dark text-surface-dark-foreground py-24 md:py-36">
       <div className="mx-auto max-w-[1400px] px-6 lg:px-10">
         <div ref={head} className="reveal max-w-3xl mb-16 md:mb-24">
-          <div className="eyebrow text-surface-dark-foreground/60 mb-5">Services & Expertises</div>
+          <div className="eyebrow text-surface-dark-foreground/60 mb-5">Services & Expertise</div>
           <h2 className="font-display uppercase text-display-lg text-7xl font-sans font-medium">
-            Expertises
+            Expertise
           </h2>
         </div>
 

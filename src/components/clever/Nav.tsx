@@ -4,10 +4,10 @@ import logo from "@/assets/cleverafrica-logo.png";
 import { cn } from "@/lib/utils";
 
 const links = [
-  { label: "Réalisations", href: "#work" },
+  { label: "Work", href: "#work" },
   { label: "Services", href: "#services" },
   { label: "Solutions", href: "#solutions" },
-  { label: "À propos", href: "#about" },
+  { label: "About", href: "#about" },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -51,7 +51,7 @@ export const Nav = () => {
     <header
       className={cn(
         "fixed top-0 inset-x-0 z-50 transition-all duration-500",
-        scrolled ? "fixed top-0 inset-x-0 z-50 transition-all duration-500 backdrop-blur-md bg-background/75 py-[18px] border border-slate-300" : "py-6 bg-transparent"
+        scrolled ? "backdrop-blur-md bg-background/75 py-[18px] border-b border-foreground/10" : "py-6 bg-transparent"
       )}
     >
       <div className="w-full px-6 lg:px-10 flex items-center justify-between">
@@ -70,7 +70,7 @@ export const Nav = () => {
         </Link>
 
         <div className="hidden md:flex">
-          <nav className="flex items-center gap-1 rounded-full border-foreground/10 bg-background/50 backdrop-blur px-2 py-1.5 border-2 opacity-85 bg-[#344256]/0">
+          <nav className="flex items-center gap-1 rounded-full border border-foreground/10 bg-background/50 backdrop-blur px-2 py-1.5 opacity-85">
             {links.map((l) => (
               <a
                 key={l.href}
@@ -116,14 +116,14 @@ export const Nav = () => {
             onClick={(e) => { setOpen(false); handleClick(e, "#contact"); }}
             className="mt-2 inline-flex items-center justify-between rounded-xl bg-foreground text-background px-4 py-3 text-base font-medium"
           >
-            Demander un devis <span>→</span>
+            Request a quote <span>→</span>
           </a>
 
         </div>
       )}
       <div
         className={cn(
-          "fixed inset-0 z-40 pointer-events-none bg-white transition-opacity duration-300",
+          "fixed inset-0 z-40 pointer-events-none bg-background transition-opacity duration-300",
           fading ? "opacity-95" : "opacity-0"
         )}
         aria-hidden="true"

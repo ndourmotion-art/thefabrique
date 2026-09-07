@@ -17,27 +17,27 @@ export const Founder = () => {
             </div>
           </div>
           <div className="md:col-span-7">
-            <div className="eyebrow text-foreground/60 mb-4">Fondateur</div>
+            <div className="eyebrow text-foreground/60 mb-4">Founder</div>
             <h2 className="font-display uppercase text-display-md">
-              Guidés par la vision, <br />
-              <span className="font-serif-italic normal-case text-primary">portés par le savoir-faire.</span>
+              Guided by vision, <br />
+              <span className="font-serif-italic normal-case text-primary">driven by craft.</span>
             </h2>
             <div className="mt-8 space-y-5 text-base md:text-lg text-foreground/75 max-w-xl">
               <p>
-                Cleverafrica est une petite équipe senior obsédée par les détails qui rendent les marques inoubliables — typographie, motion, narration, rythme.
+                Cleverafrica is a small senior team obsessed with the details that make brands unforgettable — typography, motion, storytelling, rhythm.
               </p>
               <p>
-                Nous accompagnons fondateurs, responsables marketing et créateurs de culture pour bâtir des systèmes d'identité et des contenus qui voyagent loin, sur le continent et dans le monde.
+                We partner with founders, marketing leads, and culture-makers to build identity systems and content that travels far, across the continent and around the world.
               </p>
               <p>
-                Si vous lancez quelque chose qui compte, nous serions ravis d'en parler.
+                If you're launching something that matters, we'd love to talk about it.
               </p>
             </div>
             <a
               href="#contact"
               className="mt-10 inline-flex items-center gap-3 rounded-full bg-foreground text-background pl-6 pr-2 py-2 text-base font-medium hover:bg-primary transition-colors group"
             >
-              Travailler avec nous
+              Work with us
               <span className="h-9 w-9 rounded-full bg-background text-foreground flex items-center justify-center group-hover:rotate-45 transition-transform">
                 ↗
               </span>

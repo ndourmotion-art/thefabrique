@@ -73,7 +73,7 @@ const ProjectPage = () => {
         </div>
 
         <section className="mx-auto max-w-[1400px] px-6 lg:px-10 pt-10 md:pt-12 pb-14 md:pb-20 text-left">
-          <div className="eyebrow font-bold text-base md:text-lg text-foreground mb-4">LE PROJET</div>
+          <div className="eyebrow font-bold text-base md:text-lg text-foreground mb-4">THE PROJECT</div>
           <p className="text-xl md:text-2xl leading-relaxed text-foreground/80 max-w-4xl">{project.description}</p>
         </section>
 
@@ -94,7 +94,7 @@ const ProjectPage = () => {
         <section className="mx-auto max-w-[1600px] px-6 lg:px-10 pb-20 md:pb-28">
           <div className="mb-6">
             <span className="inline-block rounded-full bg-foreground text-background font-bold text-sm md:text-base uppercase tracking-wide px-5 py-2">
-              Autres projets
+              Other projects
             </span>
           </div>
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-x-5 gap-y-8">
