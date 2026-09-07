@@ -1,23 +1,23 @@
 import { useReveal } from "@/hooks/useReveal";
 import { Check, X } from "lucide-react";
 
-const formulas = ["Starter", "Growth", "Professionnel", "Corporate"];
+const formulas = ["Starter", "Growth", "Professional", "Corporate"];
 
 type Cell = string | boolean;
 
 const rows: { label: string; values: [Cell, Cell, Cell] }[] = [
-  { label: "Objectif", values: ["Faire connaître votre entreprise", "Générer plus de prospects", "Accélérer votre croissance"] },
-  { label: "Audit & stratégie", values: [true, true, true] },
-  { label: "Durée de campagne", values: ["2 mois", "2 mois", "3 mois"] },
-  { label: "Conception graphique", values: ["2 visuels", "4 visuels", "6 visuels"] },
-  { label: "Production vidéo", values: ["1 vidéo", "2 vidéos", "3 vidéos"] },
-  { label: "Motion Design / IA", values: [false, "1 animation", "2 animations"] },
-  { label: "Conception & Rédaction", values: [true, true, true] },
-  { label: "Social Ads (Facebook, Instagram Ads)", values: ["Mise en place", "Gestion", "Gestion"] },
-  { label: "Google Ads", values: [false, "Optionel", true] },
-  { label: "Diffusion Média (TV, Radio...)", values: ["Optionel", "Optionel", true] },
-  { label: "Rapport de campagne", values: [true, true, true] },
-  { label: "Révisions", values: ["2", "4", "6"] },
+  { label: "Objective", values: ["Build brand awareness", "Generate more leads", "Accelerate your growth"] },
+  { label: "Audit & Strategy", values: [true, true, true] },
+  { label: "Campaign duration", values: ["2 months", "2 months", "3 months"] },
+  { label: "Graphic design", values: ["2 visuals", "4 visuals", "6 visuals"] },
+  { label: "Video production", values: ["1 video", "2 videos", "3 videos"] },
+  { label: "Motion Design / AI", values: [false, "1 animation", "2 animations"] },
+  { label: "Concept & Copywriting", values: [true, true, true] },
+  { label: "Social Ads (Facebook, Instagram Ads)", values: ["Setup", "Management", "Management"] },
+  { label: "Google Ads", values: [false, "Optional", true] },
+  { label: "Media Distribution (TV, Radio...)", values: ["Optional", "Optional", true] },
+  { label: "Campaign report", values: [true, true, true] },
+  { label: "Revisions", values: ["2", "4", "6"] },
 ];
 
 const CellContent = ({ value }: { value: Cell }) => {
@@ -34,9 +34,9 @@ export const Solutions = () => {
     <section id="solutions" className="bg-background text-foreground py-24 md:py-36">
       <div className="mx-auto max-w-[1200px] px-6 lg:px-10">
         <div ref={head} className="reveal max-w-3xl mb-16 md:mb-24">
-          <div className="eyebrow text-foreground/60 mb-5">Packs sur mesure</div>
+          <div className="eyebrow text-foreground/60 mb-5">Custom packages</div>
           <h2 className="font-display uppercase text-display-lg text-7xl font-sans font-medium">
-            Solutions sur mesure
+            Custom solutions
           </h2>
         </div>
 
@@ -79,7 +79,7 @@ export const Solutions = () => {
 
               {/* CTA row for the first 3 formulas */}
               <div className="p-2.5 md:p-3 border-r border-t border-foreground/10" />
-              {["Starter", "Growth", "Professionnel"].map((f) => (
+              {["Starter", "Growth", "Professional"].map((f) => (
                 <div
                   key={f}
                   className="p-2.5 md:p-3 border-r border-t border-foreground/10 bg-accent/10"
@@ -88,7 +88,7 @@ export const Solutions = () => {
                     href="#contact"
                     className="inline-flex w-full items-center justify-center rounded-full bg-foreground text-background py-2 text-xs md:text-sm font-medium hover:bg-primary transition-colors"
                   >
-                    Choisir
+                    Choose
                   </a>
                 </div>
               ))}
@@ -102,7 +102,7 @@ export const Solutions = () => {
                   href="#contact"
                   className="text-sm md:text-base font-medium underline underline-offset-4 hover:text-primary transition-colors"
                 >
-                  Demandez un devis
+                  Request a quote
                 </a>
               </div>
             </div>
