@@ -51,7 +51,7 @@ export const Nav = () => {
     <header
       className={cn(
         "fixed top-0 inset-x-0 z-50 transition-all duration-500",
-        scrolled ? "fixed top-0 inset-x-0 z-50 transition-all duration-500 backdrop-blur-md bg-background/75 py-[18px] border border-slate-300" : "py-6 bg-transparent"
+        scrolled ? "backdrop-blur-md bg-background/75 py-[18px] border-b border-foreground/10" : "py-6 bg-transparent"
       )}
     >
       <div className="w-full px-6 lg:px-10 flex items-center justify-between">
