@@ -1,7 +1,8 @@
 # Roadmap
 
-## In progress
-- [ ] Fix Nav: remove white flash + hardcoded colors (in progress)
+## Done
+- [x] Fix Nav: remove white flash + hardcoded colors
+- [x] Translate all French text on the site to English
 
-## Todo
-- [ ] Translate all French text on the site to English
+## Open
+- (none)
