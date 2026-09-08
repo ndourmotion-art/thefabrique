@@ -1,4 +1,5 @@
-import logo from "@/assets/cleverafrica-logo.png";
+import logoAsset from "@/assets/fabrique-logo.png.asset.json";
+const logo = logoAsset.url;
 
 export const Footer = () => {
   return (
