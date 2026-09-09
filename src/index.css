@@ -197,3 +197,22 @@
     transition: none;
   }
 }
+
+/* Menu link — single vertical slide up & back on hover */
+@keyframes menu-vslide {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-110%); }
+  100% { transform: translateY(0); }
+}
+.menu-link-text {
+  display: inline-block;
+  will-change: transform;
+}
+.menu-link:hover .menu-link-text {
+  animation: menu-vslide 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media (prefers-reduced-motion: reduce) {
+  .menu-link:hover .menu-link-text {
+    animation: none;
+  }
+}
