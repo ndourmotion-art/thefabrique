@@ -67,7 +67,7 @@ export const Nav = () => {
           className="flex items-center gap-2 shrink-0"
           aria-label="Cleverafrica home"
         >
-          <img src={logo} alt="Cleverafrica" className="h-4 md:h-5 w-auto" />
+          <img src={logo} alt="The FABRIQUE" className="h-10 md:h-12 w-auto" />
         </Link>
 
         <div className="hidden md:flex">
