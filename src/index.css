@@ -198,21 +198,31 @@
   }
 }
 
-/* Menu link — single vertical slide up & back on hover */
-@keyframes menu-vslide {
-  0% { transform: translateY(0); }
-  50% { transform: translateY(-110%); }
-  100% { transform: translateY(0); }
-}
+/* Menu link — on hover the label slides up from the bottom and settles */
 .menu-link-text {
+  position: relative;
   display: inline-block;
-  will-change: transform;
+  overflow: hidden;
+  vertical-align: bottom;
 }
-.menu-link:hover .menu-link-text {
-  animation: menu-vslide 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+.menu-link-label {
+  display: block;
+  white-space: nowrap;
+  line-height: 1.4;
+  transition: transform 0.45s cubic-bezier(0.34, 1.2, 0.64, 1);
+}
+.menu-link-label-bottom {
+  position: absolute;
+  top: 100%;
+  left: 0;
+}
+.menu-link:hover .menu-link-label-top,
+.menu-link:hover .menu-link-label-bottom {
+  transform: translateY(-100%);
 }
 @media (prefers-reduced-motion: reduce) {
-  .menu-link:hover .menu-link-text {
-    animation: none;
+  .menu-link:hover .menu-link-label-top,
+  .menu-link:hover .menu-link-label-bottom {
+    transform: none;
   }
 }
