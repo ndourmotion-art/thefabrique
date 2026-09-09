@@ -77,9 +77,9 @@ export const Nav = () => {
                 key={l.href}
                 href={l.href}
                 onClick={(e) => handleClick(e, l.href)}
-                className="px-4 py-1.5 text-base font-semibold text-foreground hover:text-foreground transition-colors rounded-full hover:bg-foreground/15"
+                className="menu-link px-4 py-1.5 text-base font-semibold text-foreground hover:text-foreground transition-colors rounded-full hover:bg-accent/15"
               >
-                {l.label}
+                <span className="menu-link-text">{l.label}</span>
               </a>
             ))}
           </nav>
@@ -107,9 +107,9 @@ export const Nav = () => {
               key={l.href}
               href={l.href}
               onClick={(e) => { setOpen(false); handleClick(e, l.href); }}
-              className="px-4 py-3 rounded-xl text-base font-medium hover:bg-foreground/5"
+              className="menu-link px-4 py-3 rounded-xl text-base font-medium hover:bg-accent/10"
             >
-              {l.label}
+              <span className="menu-link-text">{l.label}</span>
             </a>
           ))}
           <a
