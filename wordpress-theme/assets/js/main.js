@@ -9,6 +9,23 @@
       document.body.classList.add('tf-anim-ready');
     }
 
+    /* Give WordPress-created menu items the same two-label hover motion. */
+    document.querySelectorAll('.tf-nav a').forEach(function (link) {
+      if (link.querySelector(':scope > span > span')) return;
+      var label = link.textContent.trim();
+      if (!label) return;
+      link.textContent = '';
+      var frame = document.createElement('span');
+      var current = document.createElement('span');
+      var duplicate = document.createElement('span');
+      current.textContent = label;
+      duplicate.textContent = label;
+      duplicate.setAttribute('aria-hidden', 'true');
+      frame.appendChild(current);
+      frame.appendChild(duplicate);
+      link.appendChild(frame);
+    });
+
     /* Sticky header state */
     var header = document.getElementById('tf-header');
     if (header) {

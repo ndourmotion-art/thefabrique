@@ -6,4 +6,6 @@
 
 ## Open
 - [ ] Scroll-triggered motion for section texts (React site)
-- [ ] WordPress one-page theme files (style.css, index.php, functions.php, header/footer/front-page, customizer)
+
+## Done
+- [x] WordPress one-page theme files (style.css, index.php, functions.php, header/footer/front-page, customizer)
