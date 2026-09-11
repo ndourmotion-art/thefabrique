@@ -195,7 +195,7 @@ function the_fabrique_customize_preview_js() {
 	wp_enqueue_script(
 		'the-fabrique-customizer',
 		get_template_directory_uri() . '/assets/js/customizer.js',
-		array( 'customize-preview' ),
+		array( 'jquery', 'customize-preview' ),
 		THE_FABRIQUE_VERSION,
 		true
 	);
