@@ -20,7 +20,7 @@ export const Founder = () => {
             <div className="eyebrow text-foreground/60 mb-4">Founder</div>
             <h2 className="font-display uppercase text-display-md">
               Guided by vision, <br />
-              <span className="font-serif-italic normal-case text-primary">driven by craft.</span>
+              <span className="font-bold">driven by craft.</span>
             </h2>
             <div className="mt-8 space-y-5 text-base md:text-lg text-foreground/75 max-w-xl">
               <p>

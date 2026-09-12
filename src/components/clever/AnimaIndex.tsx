@@ -113,7 +113,7 @@ export const AnimaIndex = () => {
         <div ref={ref} className="reveal mb-12 md:mb-16">
           <div className="eyebrow text-foreground/60 mb-4">Anima index</div>
           <h2 className="font-display uppercase text-display-md">
-            Animation & motion <span className="font-serif-italic normal-case text-primary">index.</span>
+            Animation & motion <span className="font-bold">index.</span>
           </h2>
           <p className="mt-6 max-w-2xl text-base md:text-lg text-foreground/70">
             A living library of motion experiments — hover a card to play it.
