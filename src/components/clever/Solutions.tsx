@@ -49,9 +49,10 @@ export const Solutions = () => {
                 <div
                   key={f}
                   className={[
-                    "p-3 md:p-3.5 border-r border-foreground/10 last:border-r-0 font-display uppercase text-sm md:text-base leading-tight bg-accent text-accent-foreground",
+                    "sol-head p-3 md:p-3.5 border-r border-foreground/10 last:border-r-0 font-display uppercase text-sm md:text-base leading-tight bg-accent text-accent-foreground",
                     i === 3 ? "flex items-center justify-center" : "",
                   ].join(" ")}
+                  style={{ ["--sol-delay" as string]: `${i * 260}ms` }}
                 >
                   {f}
                 </div>
@@ -61,17 +62,27 @@ export const Solutions = () => {
             {/* Body: 3 data columns + a Corporate column that spans all rows */}
             <div className="grid grid-cols-[1.2fr_1fr_1fr_1fr_1fr]">
               {/* Left columns: label + 3 formula values, one grid row per data row */}
-              {rows.map((row) => (
+              {rows.map((row, r) => (
                 <div key={row.label} className="contents">
                   <div className="p-2.5 md:p-3 border-r border-t border-foreground/10 text-xs md:text-sm font-medium">
-                    {row.label}
+                    <span
+                      className="sol-cell inline-block"
+                      style={{ ["--sol-delay" as string]: `${r * 55}ms` }}
+                    >
+                      {row.label}
+                    </span>
                   </div>
                   {row.values.map((value, i) => (
                     <div
                       key={i}
                       className="p-2.5 md:p-3 border-r border-t border-foreground/10 last:border-r-0 text-xs md:text-sm text-foreground/80 flex items-start bg-accent/10"
                     >
-                      <CellContent value={value} />
+                      <span
+                        className="sol-cell inline-flex items-center"
+                        style={{ ["--sol-delay" as string]: `${380 + i * 260 + r * 55}ms` }}
+                      >
+                        <CellContent value={value} />
+                      </span>
                     </div>
                   ))}
                 </div>
@@ -79,14 +90,17 @@ export const Solutions = () => {
 
               {/* CTA row for the first 3 formulas */}
               <div className="p-2.5 md:p-3 border-r border-t border-foreground/10" />
-              {["Starter", "Growth", "Professional"].map((f) => (
+              {["Starter", "Growth", "Professional"].map((f, i) => (
                 <div
                   key={f}
                   className="p-2.5 md:p-3 border-r border-t border-foreground/10 bg-accent/10"
                 >
                   <a
                     href="#contact"
-                    className="inline-flex w-full items-center justify-center rounded-full bg-foreground text-background py-2 text-xs md:text-sm font-medium hover:bg-primary transition-colors"
+                    className="sol-cell inline-flex w-full items-center justify-center rounded-full bg-foreground text-background py-2 text-xs md:text-sm font-medium hover:bg-primary transition-colors"
+                    style={{
+                      ["--sol-delay" as string]: `${380 + i * 260 + rows.length * 55}ms`,
+                    }}
                   >
                     Choose
                   </a>
@@ -100,7 +114,8 @@ export const Solutions = () => {
               >
                 <a
                   href="#contact"
-                  className="text-sm md:text-base font-medium underline underline-offset-4 hover:text-primary transition-colors"
+                  className="sol-cell text-sm md:text-base font-medium underline underline-offset-4 hover:text-primary transition-colors"
+                  style={{ ["--sol-delay" as string]: `${380 + 3 * 260}ms` }}
                 >
                   Request a quote
                 </a>
