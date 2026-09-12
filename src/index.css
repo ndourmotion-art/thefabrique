@@ -178,22 +178,46 @@
   }
 }
 
-/* Reveal des textes de sections au scroll */
-.text-reveal {
+/* Scroll typography — headings draw letter-by-letter, copy follows by word. */
+.text-draw-letter,
+.text-draw-word {
+  display: inline-block;
   opacity: 0;
-  transform: translateY(18px);
-  transition: opacity 800ms cubic-bezier(0.2, 0.7, 0.2, 1),
-    transform 800ms cubic-bezier(0.2, 0.7, 0.2, 1);
-  will-change: opacity, transform;
+  transform: translateY(0.8em) rotate(3deg);
+  filter: blur(7px);
+  clip-path: inset(100% 0 0 0);
+  will-change: opacity, transform, filter, clip-path;
 }
-.text-reveal.is-visible {
+.text-draw-letter {
+  transition:
+    opacity 480ms cubic-bezier(0.16, 1, 0.3, 1),
+    transform 720ms cubic-bezier(0.16, 1, 0.3, 1),
+    filter 580ms ease-out,
+    clip-path 650ms cubic-bezier(0.16, 1, 0.3, 1);
+  transition-delay: calc(var(--draw-index) * 22ms);
+}
+.text-draw-word {
+  transition:
+    opacity 520ms cubic-bezier(0.16, 1, 0.3, 1),
+    transform 760ms cubic-bezier(0.16, 1, 0.3, 1),
+    filter 600ms ease-out,
+    clip-path 700ms cubic-bezier(0.16, 1, 0.3, 1);
+  transition-delay: calc(min(var(--draw-index), 18) * 48ms);
+}
+.text-draw.is-visible .text-draw-letter,
+.text-draw.is-visible .text-draw-word {
   opacity: 1;
-  transform: none;
+  transform: translateY(0) rotate(0);
+  filter: blur(0);
+  clip-path: inset(0 0 0 0);
 }
 @media (prefers-reduced-motion: reduce) {
-  .text-reveal {
+  .text-draw-letter,
+  .text-draw-word {
     opacity: 1;
     transform: none;
+    filter: none;
+    clip-path: none;
     transition: none;
   }
 }
