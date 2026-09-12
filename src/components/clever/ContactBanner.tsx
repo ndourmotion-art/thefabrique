@@ -6,7 +6,7 @@ export const ContactBanner = () => {
       <div className="mx-auto max-w-[1600px] px-6 lg:px-10">
         <img
           src={banniereAsset.url}
-          alt="Cleverafrica - Be visible to exist"
+          alt="The FABRIQUE - Be visible, to exist!"
           className="w-full h-auto rounded-2xl"
           loading="lazy"
         />

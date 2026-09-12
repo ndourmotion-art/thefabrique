@@ -1,11 +1,11 @@
 {
-  "asset_id": "22c7c68c-ecb9-4567-ae66-e9e78bdf069a",
-  "content_type": "image/jpeg",
-  "created_at": "2026-08-06T13:07:54Z",
-  "original_filename": "banniere.jpg",
+  "version": 1,
+  "asset_id": "4b116531-16b0-4ec6-afbf-34f51de71538",
   "project_id": "de33dd86-3efc-42f9-b627-f204f069b312",
-  "r2_key": "a/v1/de33dd86-3efc-42f9-b627-f204f069b312/22c7c68c-ecb9-4567-ae66-e9e78bdf069a/banniere.jpg",
-  "size": 230833,
-  "url": "/__l5e/assets-v1/22c7c68c-ecb9-4567-ae66-e9e78bdf069a/banniere.jpg",
-  "version": 1
+  "url": "/__l5e/assets-v1/4b116531-16b0-4ec6-afbf-34f51de71538/banniere.jpg",
+  "r2_key": "a/v1/de33dd86-3efc-42f9-b627-f204f069b312/4b116531-16b0-4ec6-afbf-34f51de71538/banniere.jpg",
+  "original_filename": "banniere.jpg",
+  "size": 227087,
+  "content_type": "image/jpeg",
+  "created_at": "2026-09-12T14:11:55Z"
 }
