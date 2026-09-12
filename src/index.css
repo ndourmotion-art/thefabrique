@@ -250,3 +250,44 @@
     transform: none;
   }
 }
+
+/* Custom solutions: per-cell motion reveal */
+.sol-cell {
+  opacity: 0;
+  transform: translateY(14px) scale(0.985);
+  filter: blur(6px);
+  transition:
+    opacity 620ms cubic-bezier(0.22, 1, 0.36, 1),
+    transform 620ms cubic-bezier(0.22, 1, 0.36, 1),
+    filter 620ms cubic-bezier(0.22, 1, 0.36, 1);
+  transition-delay: var(--sol-delay, 0ms);
+}
+.is-visible .sol-cell {
+  opacity: 1;
+  transform: none;
+  filter: blur(0);
+}
+
+/* Column header cards get a slightly bolder entrance */
+.sol-head {
+  opacity: 0;
+  transform: translateY(-18px);
+  transition:
+    opacity 700ms cubic-bezier(0.22, 1, 0.36, 1),
+    transform 700ms cubic-bezier(0.34, 1.56, 0.64, 1);
+  transition-delay: var(--sol-delay, 0ms);
+}
+.is-visible .sol-head {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sol-cell,
+  .sol-head {
+    opacity: 1;
+    transform: none;
+    filter: none;
+    transition: none;
+  }
+}
