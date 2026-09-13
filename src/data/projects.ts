@@ -1,10 +1,10 @@
 import adsPreview from "@/assets/ads-preview.jpg.asset.json";
-<img src="/media/ads-mobility-123249.png" />
-<img src="/media/ads-mobility-123216.png" />
-<img src="/media/ads-mobility-123316.png" />
-<img src="/media/ads-mobility-123223.png" />
-<img src="/media/jet7x.jpg" alt="jet7x" />
-<img src="/media/championsPreview.jpg" />
+import adsShot1 from "@/assets/ads-mobility-123249.png.asset.json";
+import adsShot2 from "@/assets/ads-mobility-123216.png.asset.json";
+import adsShot3 from "@/assets/ads-mobility-123316.png.asset.json";
+import adsShot4 from "@/assets/ads-mobility-123223.png.asset.json";
+import jet7xPreview from "@/assets/jet7x.jpg.asset.json";
+import championsPreview from "@/assets/les-champions.jpg.asset.json";
 import noelMadarPreview from "@/assets/noel-madar.jpg.asset.json";
 import sinoMaliPreview from "@/assets/sino-africaine-mali.jpg.asset.json";
 import muna1 from "@/assets/muna1.jpg.asset.json";
