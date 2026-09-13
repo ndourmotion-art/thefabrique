@@ -3,7 +3,7 @@ import adsPreview from "@/assets/ads-preview.jpg.asset.json";
 <img src="/media/ads-mobility-123216.png" />
 <img src="/media/ads-mobility-123316.png" />
 <img src="/media/ads-mobility-123223.png" />
-<img src="/media/jet7x.jpg" />
+<img src="/media/jet7x.jpg" alt="jet7x" />
 <img src="/media/championsPreview.jpg" />
 import noelMadarPreview from "@/assets/noel-madar.jpg.asset.json";
 import sinoMaliPreview from "@/assets/sino-africaine-mali.jpg.asset.json";
