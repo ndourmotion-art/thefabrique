@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import logoAsset from "@/assets/fabrique-logo.png.asset.json";
+const logoAsset = { url: "/media/fabrique-logo.png" };
 const logo = logoAsset.url;
 import { cn } from "@/lib/utils";
 

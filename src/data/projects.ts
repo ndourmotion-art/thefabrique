@@ -1,19 +1,19 @@
-import adsPreview from "@/assets/ads-preview.jpg.asset.json";
-import adsShot1 from "@/assets/ads-mobility-123249.png.asset.json";
-import adsShot2 from "@/assets/ads-mobility-123216.png.asset.json";
-import adsShot3 from "@/assets/ads-mobility-123316.png.asset.json";
-import adsShot4 from "@/assets/ads-mobility-123223.png.asset.json";
-import jet7xPreview from "@/assets/jet7x.jpg.asset.json";
-import championsPreview from "@/assets/les-champions.jpg.asset.json";
-import noelMadarPreview from "@/assets/noel-madar.jpg.asset.json";
-import sinoMaliPreview from "@/assets/sino-africaine-mali.jpg.asset.json";
-import muna1 from "@/assets/muna1.jpg.asset.json";
-import muna2 from "@/assets/muna2.jpg.asset.json";
-import muna3 from "@/assets/muna3.jpg.asset.json";
-import muna4 from "@/assets/muna4.jpg.asset.json";
-import ads3 from "@/assets/ads3.jpg.asset.json";
-import can2023 from "@/assets/can2023.jpg.asset.json";
-import sococim from "@/assets/sococim.jpg.asset.json";
+const adsPreview = { url: "/media/ads-preview.jpg" };
+const adsShot1 = { url: "/media/ads-mobility-123249.png" };
+const adsShot2 = { url: "/media/ads-mobility-123216.png" };
+const adsShot3 = { url: "/media/ads-mobility-123316.png" };
+const adsShot4 = { url: "/media/ads-mobility-123223.png" };
+const jet7xPreview = { url: "/media/jet7x.jpg" };
+const championsPreview = { url: "/media/les-champions.jpg" };
+const noelMadarPreview = { url: "/media/noel-madar.jpg" };
+const sinoMaliPreview = { url: "/media/sino-africaine-mali.jpg" };
+const muna1 = { url: "/media/muna1.jpg" };
+const muna2 = { url: "/media/muna2.jpg" };
+const muna3 = { url: "/media/muna3.jpg" };
+const muna4 = { url: "/media/muna4.jpg" };
+const ads3 = { url: "/media/ads3.jpg" };
+const can2023 = { url: "/media/can2023.jpg" };
+const sococim = { url: "/media/sococim.jpg" };
 
 export type Project = {
   slug: string;
