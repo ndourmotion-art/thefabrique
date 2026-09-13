@@ -8,7 +8,7 @@ export const Footer = () => {
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
           <img src={logo} alt="The FABRIQUE" className="h-16 w-auto" />
           <div className="text-sm text-foreground/60">
-            © {new Date().getFullYear()} Cleverafrica. All rights reserved.
+            © 2026 The Fabrique. All rights reserved.
           </div>
         </div>
       </div>

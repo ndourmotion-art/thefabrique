@@ -101,7 +101,7 @@ export const ContactCTA = () => {
               hello@cleverafrica.com
             </a>
             <span className="text-foreground/30">·</span>
-            <span className="font-semibold text-foreground">+221 78 142 56 80</span>
+            <span className="font-semibold text-foreground">+250 792 873 396</span>
           </div>
         </form>
       </div>
