@@ -175,7 +175,7 @@
 }
 .home-intro-content--visible {
   opacity: 1;
-  filter: blur(0);
+  filter: none;
   transform: none;
 }
 .hero-opening__media,
