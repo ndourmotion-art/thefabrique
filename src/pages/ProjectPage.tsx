@@ -4,6 +4,7 @@ import { Footer } from "@/components/clever/Footer";
 import { useReveal } from "@/hooks/useReveal";
 import { ScrollTextReveal } from "@/components/clever/ScrollTextReveal";
 import { getProject, projects } from "@/data/projects";
+import { GalleryCarousel } from "@/components/clever/GalleryCarousel";
 
 const ProjectPage = () => {
   const { slug = "" } = useParams();
