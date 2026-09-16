@@ -8,12 +8,12 @@ export const ContactCTA = () => {
   const [fileName, setFileName] = useState<string | null>(null);
 
   const inputClass =
-    "w-full rounded-2xl bg-muted/60 border border-foreground/10 px-5 py-4 text-base text-foreground font-medium placeholder:text-foreground/55 focus:outline-none focus:ring-2 focus:ring-primary/40 focus:border-transparent transition";
-  const labelClass = "block eyebrow text-foreground/60 mb-3";
+    "w-full rounded-2xl bg-foreground/10 border border-foreground/10 px-6 py-5 text-lg text-foreground font-semibold placeholder:text-foreground/60 focus:outline-none focus:ring-2 focus:ring-primary/40 focus:border-transparent transition";
+  const labelClass = "block eyebrow text-foreground/70 mb-3 font-semibold";
 
   return (
     <section id="contact" className="py-24 md:py-32">
-      <div ref={ref} className="reveal mx-auto max-w-5xl px-6 lg:px-10">
+      <div ref={ref} className="reveal mx-auto max-w-6xl px-6 lg:px-12">
         <form
           onSubmit={(e) => e.preventDefault()}
           className="space-y-8"
@@ -89,7 +89,7 @@ export const ContactCTA = () => {
           <div className="pt-4">
             <button
               type="submit"
-              className="inline-flex items-center gap-3 rounded-full bg-foreground text-background px-8 py-4 text-base font-semibold hover:bg-primary transition-colors"
+              className="inline-flex items-center gap-3 rounded-full bg-foreground text-background px-9 py-5 text-lg font-semibold hover:bg-primary transition-colors"
             >
               Send message <span aria-hidden>↗</span>
             </button>

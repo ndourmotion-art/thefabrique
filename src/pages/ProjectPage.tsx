@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import { Nav } from "@/components/clever/Nav";
 import { Footer } from "@/components/clever/Footer";
@@ -10,6 +11,10 @@ const ProjectPage = () => {
   const { slug = "" } = useParams();
   const project = getProject(slug);
   const heading = useReveal<HTMLDivElement>();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [slug]);
 
   if (!project) {
     return (
