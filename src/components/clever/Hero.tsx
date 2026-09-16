@@ -1,15 +1,16 @@
-import { useReveal } from "@/hooks/useReveal";
 const heroAsset = { url: "/media/hero-car.jpg" };
 
 const heroImage = heroAsset.url;
 
-export const Hero = () => {
-  const ref = useReveal<HTMLDivElement>();
+type HeroProps = {
+  introVisible?: boolean;
+};
 
+export const Hero = ({ introVisible = true }: HeroProps) => {
   return (
-    <section id="top" className="relative pt-20 md:pt-24 pb-16 md:pb-24 overflow-hidden">
+    <section id="top" className={`hero-opening relative pt-20 md:pt-24 pb-16 md:pb-24 overflow-hidden ${introVisible ? "hero-opening--visible" : ""}`}>
       <div className="mx-auto max-w-[1600px] px-2 md:px-4">
-        <div ref={ref} className="reveal relative aspect-[4/3] md:aspect-[16/10] w-full overflow-hidden rounded-2xl bg-muted">
+        <div className="hero-opening__media relative aspect-[4/3] md:aspect-[16/10] w-full overflow-hidden rounded-2xl bg-muted">
           <img
             src={heroImage}
             alt="Clever Africa hero"
@@ -17,20 +18,20 @@ export const Hero = () => {
           />
 
           <div className="absolute inset-0 flex flex-col justify-center px-6 md:px-14">
-            <h1 className="font-display uppercase tracking-tight leading-[0.9]">
-              <span className="block font-sans font-black text-background text-[clamp(2.6rem,8vw,6.5rem)] drop-shadow-[0_2px_10px_rgba(0,0,0,0.35)]">
+            <h1 className="hero-opening__title font-display uppercase tracking-tight leading-[0.9]" data-no-reveal>
+              <span className="hero-opening__line block font-sans font-black text-background text-[clamp(2.6rem,8vw,6.5rem)] drop-shadow-[0_2px_10px_rgba(0,0,0,0.35)]">
                 Creative
               </span>
-              <span className="block font-sans font-black text-accent text-[clamp(2.6rem,8vw,6.5rem)] drop-shadow-[0_2px_10px_rgba(0,0,0,0.35)]">
+              <span className="hero-opening__line hero-opening__line--second block font-sans font-black text-accent text-[clamp(2.6rem,8vw,6.5rem)] drop-shadow-[0_2px_10px_rgba(0,0,0,0.35)]">
                 Powerhouse
               </span>
             </h1>
 
-            <div className="eyebrow text-background/90 mt-6 md:mt-8 text-[0.7rem] md:text-sm tracking-[0.18em]">
+            <div className="hero-opening__support eyebrow text-background/90 mt-6 md:mt-8 text-[0.7rem] md:text-sm tracking-[0.18em]" data-no-reveal>
               For brands, organizations, and startups of all sizes.
             </div>
 
-            <div className="mt-8 md:mt-10 flex flex-wrap items-center gap-4">
+            <div className="hero-opening__actions mt-8 md:mt-10 flex flex-wrap items-center gap-4" data-no-reveal>
               <a
                 href="#work"
                 className="group inline-flex items-center gap-3 rounded-full bg-foreground text-background pl-6 pr-2 py-2 text-base font-medium hover:bg-primary transition-colors"

@@ -17,3 +17,4 @@
 - [x] Contact form input text darker + bolder
 - [x] Remove the Ramadan project; enlarge Expertise and About content; strengthen light text
 - [x] Replace Madar CAN 2023 with the Buiz Ai Experimental video project and gallery
+- [x] Add a two-second full-screen logo intro and blurred, staggered homepage reveal
