@@ -177,6 +177,7 @@
   opacity: 1;
   filter: none;
   transform: none;
+  will-change: auto;
 }
 .hero-opening__media,
 .hero-opening__line,
