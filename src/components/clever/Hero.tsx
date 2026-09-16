@@ -23,16 +23,10 @@ export const Hero = () => {
 
             <h1 className="font-display uppercase tracking-tight leading-[0.9]">
               <span className="block font-sans font-black text-background text-[clamp(2.6rem,8vw,6.5rem)] drop-shadow-[0_2px_10px_rgba(0,0,0,0.35)]">
-                Making
-              </span>
-              <span className="block font-sans font-black text-background text-[clamp(2.6rem,8vw,6.5rem)] drop-shadow-[0_2px_10px_rgba(0,0,0,0.35)]">
-                Things
+                Creative
               </span>
               <span className="block font-sans font-black text-accent text-[clamp(2.6rem,8vw,6.5rem)] drop-shadow-[0_2px_10px_rgba(0,0,0,0.35)]">
-                Move
-              </span>
-              <span className="block font-sans font-black text-accent text-[clamp(2.6rem,8vw,6.5rem)] drop-shadow-[0_2px_10px_rgba(0,0,0,0.35)]">
-                Forward
+                Powerhouse
               </span>
             </h1>
 
