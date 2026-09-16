@@ -101,17 +101,9 @@ const ProjectCard = ({
 
           <div className="work-project__shade absolute inset-0" />
           <div className="work-project__overlay absolute inset-0 flex flex-col justify-center px-6 md:px-14">
-            <span className="eyebrow mb-4 text-primary-foreground/80">
-              {String(index + 1).padStart(2, "0")} / {String(projects.length).padStart(2, "0")}
-            </span>
             <h3 data-no-reveal className="work-project__title whitespace-pre-line font-display uppercase font-sans font-black text-primary-foreground">
               {project.title}
             </h3>
-            <div className="mt-5 flex flex-wrap gap-x-5 gap-y-1 text-xs uppercase text-primary-foreground/80 md:text-sm">
-              <span>{project.client}</span>
-              <span>{project.year}</span>
-              <span>{project.tags.join(" · ")}</span>
-            </div>
           </div>
           <span
             className={`work-project__view ${cursor.visible ? "is-visible" : ""}`}

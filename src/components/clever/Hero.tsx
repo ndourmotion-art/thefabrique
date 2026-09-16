@@ -54,16 +54,16 @@ export const Hero = ({ mediaVisible = true, contentVisible = true }: HeroProps) 
             <div className="hero-opening__actions mt-8 md:mt-10 flex flex-wrap items-center gap-4" data-no-reveal>
               <a
                 href="#work"
-                className="group inline-flex items-center gap-3 rounded-full bg-foreground text-background pl-6 pr-2 py-2 text-base font-medium hover:bg-primary transition-colors"
+                className="group inline-flex items-center gap-3 rounded-full bg-background text-foreground pl-6 pr-2 py-2 text-base font-medium hover:bg-background/90 transition-colors"
               >
                 View work
-                <span className="h-9 w-9 rounded-full bg-background text-foreground flex items-center justify-center group-hover:rotate-45 transition-transform">
+                <span className="h-9 w-9 rounded-full bg-foreground text-background flex items-center justify-center group-hover:rotate-45 transition-transform">
                   ↗
                 </span>
               </a>
               <a
                 href="#contact"
-                className="inline-flex items-center gap-2 rounded-full bg-accent text-accent-foreground px-6 py-3 text-base font-medium hover:bg-foreground hover:text-background transition-colors"
+                className="inline-flex items-center gap-2 rounded-full bg-accent text-accent-foreground px-6 py-3 text-base font-medium hover:bg-background hover:text-foreground transition-colors"
               >
                 Request a quote
               </a>
