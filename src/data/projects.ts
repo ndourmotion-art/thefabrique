@@ -13,7 +13,6 @@ const muna3 = { url: "/media/muna3.jpg" };
 const muna4 = { url: "/media/muna4.jpg" };
 const ads3 = { url: "/media/ads3.jpg" };
 const can2023 = { url: "/media/can2023.jpg" };
-const sococim = { url: "/media/sococim.jpg" };
 
 export type Project = {
   slug: string;
@@ -136,19 +135,6 @@ export const projects: Project[] = [
     description:
       "A Madar campaign for CAN 2023 in Ivory Coast, blending football and brand world in a dynamic 3D animation.",
     gallery: [can2023.url],
-  },
-  {
-    slug: "sococim-ramadan",
-    title: "SOCOCIM Ramadan",
-    tags: ["Advertising", "Art Direction"],
-    image: sococim.url,
-    link: "https://vimeo.com/341352395?fl=pl&fe=sh",
-    client: "SOCOCIM Industries",
-    year: "2023",
-    role: "Art Direction, Production",
-    description:
-      "A warm visual campaign for SOCOCIM Industries for Ramadan, celebrating the brand through a luminous, festive atmosphere.",
-    gallery: [sococim.url],
   },
 ];
 
