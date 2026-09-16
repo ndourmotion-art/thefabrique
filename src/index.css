@@ -202,6 +202,13 @@
 .hero-opening__line--second { transition-delay: 580ms; }
 .hero-opening__support { transition-delay: 760ms; }
 .hero-opening__actions { transition-delay: 930ms; }
+.hero-opening__glyph {
+  display: inline-block;
+  opacity: 0;
+  filter: blur(7px);
+  clip-path: inset(0 100% 0 0);
+  transform: translateY(0.22em);
+}
 .hero-opening--visible .hero-opening__media,
 .hero-opening--visible .hero-opening__line,
 .hero-opening--visible .hero-opening__support,
@@ -209,6 +216,25 @@
   opacity: 1;
   filter: blur(0);
   transform: none;
+}
+.hero-opening--visible .hero-opening__glyph {
+  animation: hero-write-in 680ms cubic-bezier(0.22, 1, 0.36, 1) both;
+  animation-delay: var(--hero-write-delay, 0ms);
+}
+
+@keyframes hero-write-in {
+  0% {
+    opacity: 0;
+    filter: blur(7px);
+    clip-path: inset(0 100% 0 0);
+    transform: translateY(0.22em);
+  }
+  100% {
+    opacity: 1;
+    filter: blur(0);
+    clip-path: inset(0 0 0 0);
+    transform: none;
+  }
 }
 
 @media (max-width: 640px) {
@@ -223,11 +249,15 @@
   .home-intro-content,
   .hero-opening__media,
   .hero-opening__line,
+  .hero-opening__glyph,
   .hero-opening__support,
   .hero-opening__actions {
     transition-duration: 1ms;
     filter: none;
     transform: none;
+    animation: none;
+    opacity: 1;
+    clip-path: none;
   }
 }
 

@@ -2,6 +2,20 @@ const heroAsset = { url: "/media/hero-car.jpg" };
 
 const heroImage = heroAsset.url;
 
+const WrittenLine = ({ text, start }: { text: string; start: number }) => (
+  <>
+    {Array.from(text).map((character, index) => (
+      <span
+        key={`${character}-${index}`}
+        className="hero-opening__glyph"
+        style={{ "--hero-write-delay": `${start + index * 42}ms` } as React.CSSProperties}
+      >
+        {character === " " ? "\u00A0" : character}
+      </span>
+    ))}
+  </>
+);
+
 type HeroProps = {
   introVisible?: boolean;
 };
@@ -20,10 +34,10 @@ export const Hero = ({ introVisible = true }: HeroProps) => {
           <div className="absolute inset-0 flex flex-col justify-center px-6 md:px-14">
             <h1 className="hero-opening__title font-display uppercase tracking-tight leading-[0.9]" data-no-reveal>
               <span className="hero-opening__line block font-sans font-black text-background text-[clamp(2.6rem,8vw,6.5rem)] drop-shadow-[0_2px_10px_rgba(0,0,0,0.35)]">
-                Creative
+                <WrittenLine text="Creative" start={390} />
               </span>
               <span className="hero-opening__line hero-opening__line--second block font-sans font-black text-accent text-[clamp(2.6rem,8vw,6.5rem)] drop-shadow-[0_2px_10px_rgba(0,0,0,0.35)]">
-                Powerhouse
+                <WrittenLine text="Powerhouse" start={730} />
               </span>
             </h1>
 
