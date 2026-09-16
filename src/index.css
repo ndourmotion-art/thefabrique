@@ -279,7 +279,7 @@
   }
 }
 
-/* Scroll typography — one smooth slide, no letter or word splitting. */
+/* Scroll typography — smooth slide for blocks that can't be split. */
 .slide-reveal {
   opacity: 0;
   transform: translateY(28px);
@@ -292,13 +292,64 @@
   opacity: 1;
   transform: none;
 }
-@media (prefers-reduced-motion: reduce) {
-  .slide-reveal {
+
+/* Self-writing text: letters/words draw themselves in on scroll */
+.text-draw {
+  word-break: keep-all;
+  overflow-wrap: normal;
+  hyphens: none;
+}
+.text-draw-letter,
+.text-draw-word {
+  display: inline-block;
+  opacity: 0;
+  filter: blur(6px);
+  transform: translateY(0.5em) scale(0.96);
+  clip-path: inset(0 100% 0 0);
+  will-change: opacity, transform, filter, clip-path;
+}
+.text-draw-word {
+  white-space: pre;
+}
+.text-draw.is-visible .text-draw-letter,
+.text-draw.is-visible .text-draw-word {
+  animation: text-draw-in 720ms cubic-bezier(0.22, 1, 0.36, 1) both;
+  animation-delay: var(--draw-delay, 0ms);
+}
+
+@keyframes text-draw-in {
+  0% {
+    opacity: 0;
+    filter: blur(6px);
+    transform: translateY(0.5em) scale(0.96);
+    clip-path: inset(0 100% 0 0);
+  }
+  60% {
     opacity: 1;
-    transform: none;
-    transition: none;
+    filter: blur(0);
+    clip-path: inset(0 0 0 0);
+  }
+  100% {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0) scale(1);
+    clip-path: inset(0 0 0 0);
   }
 }
+
+@media (prefers-reduced-motion: reduce) {
+  .slide-reveal,
+  .text-draw-letter,
+  .text-draw-word {
+    opacity: 1;
+    transform: none;
+    filter: none;
+    clip-path: none;
+    transition: none;
+    animation: none;
+  }
+}
+
 
 /* Menu link — on hover the label slides up from the bottom and settles */
 .menu-link-text {
