@@ -1,8 +1,8 @@
 import { useEffect } from "react";
 
 /**
- * Animates section copy as it appears on scroll.
- * Headings draw in letter-by-letter; supporting copy follows word-by-word.
+ * Reveals section copy with one smooth slide as it enters the viewport.
+ * No letter/word splitting — the whole block glides into place.
  */
 const SELECTOR = [
   "main section h1",
@@ -20,52 +20,6 @@ export function ScrollTextReveal() {
     const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     if (prefersReduced) return;
 
-    const wrapTextNode = (node: Text, mode: "letter" | "word", startIndex: number) => {
-      const text = node.textContent ?? "";
-      const parts = mode === "letter" ? Array.from(text) : text.split(/(\s+)/);
-      const fragment = document.createDocumentFragment();
-      let index = startIndex;
-
-      parts.forEach((part) => {
-        if (!part || /^\s+$/.test(part)) {
-          fragment.appendChild(document.createTextNode(part));
-          return;
-        }
-
-        const span = document.createElement("span");
-        span.className = mode === "letter" ? "text-draw-letter" : "text-draw-word";
-        span.textContent = part;
-        span.style.setProperty("--draw-index", String(index));
-        fragment.appendChild(span);
-        index += 1;
-      });
-
-      node.replaceWith(fragment);
-      return index;
-    };
-
-    const prepare = (el: HTMLElement) => {
-      if (el.dataset.textDrawReady === "true") return;
-      el.dataset.textDrawReady = "true";
-
-      const isHeading = /^H[1-4]$/.test(el.tagName);
-      const mode = isHeading ? "letter" : "word";
-      const walker = document.createTreeWalker(el, NodeFilter.SHOW_TEXT);
-      const nodes: Text[] = [];
-      let current = walker.nextNode();
-
-      while (current) {
-        if (current.textContent?.trim()) nodes.push(current as Text);
-        current = walker.nextNode();
-      }
-
-      let index = 0;
-      nodes.forEach((node) => {
-        index = wrapTextNode(node, mode, index);
-      });
-      el.classList.add("text-draw");
-    };
-
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -75,15 +29,16 @@ export function ScrollTextReveal() {
           observer.unobserve(el);
         });
       },
-      { threshold: 0.15, rootMargin: "0px 0px -8% 0px" }
+      { threshold: 0.12, rootMargin: "0px 0px -6% 0px" }
     );
 
     const attach = () => {
       document.querySelectorAll<HTMLElement>(SELECTOR).forEach((el) => {
         if (el.closest("nav, header[data-no-reveal], [data-no-reveal]")) return;
-        if (el.dataset.textDrawReady === "true") return;
+        if (el.dataset.slideReady === "true") return;
         if (!el.textContent?.trim()) return;
-        prepare(el);
+        el.dataset.slideReady = "true";
+        el.classList.add("slide-reveal");
         observer.observe(el);
       });
     };
