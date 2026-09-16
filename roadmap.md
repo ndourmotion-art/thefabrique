@@ -18,3 +18,4 @@
 - [x] Remove the Ramadan project; enlarge Expertise and About content; strengthen light text
 - [x] Replace Madar CAN 2023 with the Buiz Ai Experimental video project and gallery
 - [x] Add a two-second full-screen logo intro and blurred, staggered homepage reveal
+- [x] Put Made in Passion on one extended line, enlarge the last work image, and add an all-works page with a centered View All Works button

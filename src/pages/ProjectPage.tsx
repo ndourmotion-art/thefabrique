@@ -38,7 +38,7 @@ const ProjectPage = () => {
 
       <article>
         <header ref={heading} className="reveal pt-36 md:pt-44 pb-12 md:pb-16 mx-auto max-w-[1400px] px-6 lg:px-10">
-          <Link to="/#work" className="text-sm text-foreground/60 hover:text-foreground">← All work</Link>
+          <Link to="/works" className="text-sm text-foreground/60 hover:text-foreground">← All works</Link>
           <h1 data-no-reveal className="whitespace-pre-line font-display uppercase text-4xl md:text-6xl lg:text-7xl font-black leading-[0.95] mt-6">
             {project.title}
           </h1>

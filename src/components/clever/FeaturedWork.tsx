@@ -14,9 +14,11 @@ const getVimeoId = (link?: string) => {
 const ProjectCard = ({
   project,
   index,
+  featured = false,
 }: {
   project: Project;
   index: number;
+  featured?: boolean;
 }) => {
   const ref = useReveal<HTMLAnchorElement>();
   const vimeoId = getVimeoId(project.link);
@@ -62,7 +64,7 @@ const ProjectCard = ({
       }}
     >
       <article>
-        <div className="work-project__media relative overflow-hidden bg-muted">
+        <div className={`work-project__media ${featured ? "work-project__media--featured" : ""} relative overflow-hidden bg-muted`}>
           <img
             src={project.image}
             alt={project.title}
@@ -176,8 +178,21 @@ export const FeaturedWork = () => {
               key={p.title}
               project={p}
               index={i}
+              featured={i === projects.length - 1}
             />
           ))}
+        </div>
+
+        <div className="mt-14 flex justify-center md:mt-20">
+          <Button
+            asChild
+            className="rounded-full bg-foreground px-8 py-6 text-sm font-extrabold uppercase tracking-wide text-background hover:bg-accent hover:text-accent-foreground md:px-10 md:text-base"
+          >
+            <Link to="/works">
+              View all works
+              <ArrowUpRight className="h-5 w-5" aria-hidden="true" />
+            </Link>
+          </Button>
         </div>
       </div>
 
