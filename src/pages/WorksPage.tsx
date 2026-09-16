@@ -58,9 +58,6 @@ const WorksPage = () => {
                     <h2 data-no-reveal className="whitespace-pre-line font-display text-2xl font-black uppercase leading-[0.95] md:text-4xl">
                       {project.title}
                     </h2>
-                    <p className="mt-3 text-sm font-semibold uppercase text-foreground/60">
-                      {project.client} · {project.year}
-                    </p>
                   </div>
                   <Button
                     asChild
