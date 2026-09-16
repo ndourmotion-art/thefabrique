@@ -13,11 +13,11 @@ const muna3 = { url: "/media/muna3.jpg" };
 const muna4 = { url: "/media/muna4.jpg" };
 const ads3 = { url: "/media/ads3.jpg" };
 import buizAiVideo from "@/assets/buiz-ai.mp4.asset.json";
-import buizAi01 from "@/assets/buiz-ai-01.png.asset.json";
-import buizAi02 from "@/assets/buiz-ai-02.png.asset.json";
-import buizAi03 from "@/assets/buiz-ai-03.png.asset.json";
-import buizAi04 from "@/assets/buiz-ai-04.png.asset.json";
-import buizAi05 from "@/assets/buiz-ai-05.png.asset.json";
+const buizAi01 = { url: "/media/buiz-ai-01.png" };
+const buizAi02 = { url: "/media/buiz-ai-02.png" };
+const buizAi03 = { url: "/media/buiz-ai-03.png" };
+const buizAi04 = { url: "/media/buiz-ai-04.png" };
+const buizAi05 = { url: "/media/buiz-ai-05.png" };
 
 export type Project = {
   slug: string;

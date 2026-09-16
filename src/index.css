@@ -317,6 +317,9 @@
   border-radius: 1rem;
   isolation: isolate;
 }
+.work-project__media--featured {
+  aspect-ratio: 16 / 9;
+}
 .work-project__shade {
   z-index: 2;
   background: linear-gradient(180deg, hsl(var(--foreground) / 0.25), transparent 28%, transparent 58%, hsl(var(--foreground) / 0.45));
@@ -407,6 +410,9 @@
 @media (max-width: 768px) {
   .work-project__media {
     aspect-ratio: 16 / 9;
+  }
+  .work-project__media--featured {
+    aspect-ratio: 4 / 3;
   }
   .work-project__view {
     display: none;

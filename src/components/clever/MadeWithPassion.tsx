@@ -4,10 +4,9 @@ export const MadeWithPassion = () => {
   const ref = useReveal<HTMLDivElement>();
   return (
     <section className="py-16 md:py-24">
-      <div ref={ref} className="reveal mx-auto max-w-[1400px] px-6 lg:px-10 text-center">
-        <h2 className="font-display uppercase font-bold leading-[0.9] tracking-tight text-[14vw] md:text-[10vw]">
-          <span className="block">Made with</span>
-          <span className="block">passion</span>
+      <div ref={ref} className="reveal mx-auto max-w-[1600px] px-2 md:px-4 text-center overflow-hidden">
+        <h2 className="font-display uppercase font-bold leading-[0.9] tracking-normal text-[14vw] md:text-[10vw] whitespace-nowrap">
+          <span className="block">Made in passion</span>
         </h2>
       </div>
     </section>

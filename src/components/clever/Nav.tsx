@@ -36,6 +36,7 @@ export const Nav = () => {
 
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     if (href.startsWith("#")) {
+      if (location.pathname !== "/") return;
       e.preventDefault();
       setFading(true);
       setTimeout(() => {
@@ -74,7 +75,7 @@ export const Nav = () => {
             {links.map((l) => (
               <a
                 key={l.href}
-                href={l.href}
+                href={location.pathname === "/" ? l.href : `/${l.href}`}
                 onClick={(e) => handleClick(e, l.href)}
                 className="menu-link px-4 py-1.5 text-lg font-semibold text-foreground hover:text-foreground transition-colors rounded-full hover:bg-accent/15"
               >
@@ -107,7 +108,7 @@ export const Nav = () => {
           {links.map((l) => (
             <a
               key={l.href}
-              href={l.href}
+              href={location.pathname === "/" ? l.href : `/${l.href}`}
               onClick={(e) => { setOpen(false); handleClick(e, l.href); }}
               className="menu-link px-4 py-3 rounded-xl text-lg font-medium hover:bg-accent/10"
             >
@@ -118,7 +119,7 @@ export const Nav = () => {
             </a>
           ))}
           <a
-            href="#contact"
+            href={location.pathname === "/" ? "#contact" : "/#contact"}
             onClick={(e) => { setOpen(false); handleClick(e, "#contact"); }}
             className="mt-2 inline-flex items-center justify-between rounded-xl bg-foreground text-background px-4 py-3 text-base font-medium"
           >
