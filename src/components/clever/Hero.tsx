@@ -17,10 +17,6 @@ export const Hero = () => {
           />
 
           <div className="absolute inset-0 flex flex-col justify-center px-6 md:px-14">
-            <div className="eyebrow text-background/90 mt-6 md:mt-8 mb-4 md:mb-6 text-[0.7rem] md:text-sm tracking-[0.18em]">
-              For brands, organizations, and startups of all sizes.
-            </div>
-
             <h1 className="font-display uppercase tracking-tight leading-[0.9]">
               <span className="block font-sans font-black text-background text-[clamp(2.6rem,8vw,6.5rem)] drop-shadow-[0_2px_10px_rgba(0,0,0,0.35)]">
                 Creative
@@ -29,6 +25,10 @@ export const Hero = () => {
                 Powerhouse
               </span>
             </h1>
+
+            <div className="eyebrow text-background/90 mt-6 md:mt-8 text-[0.7rem] md:text-sm tracking-[0.18em]">
+              For brands, organizations, and startups of all sizes.
+            </div>
 
             <div className="mt-8 md:mt-10 flex flex-wrap items-center gap-4">
               <a
