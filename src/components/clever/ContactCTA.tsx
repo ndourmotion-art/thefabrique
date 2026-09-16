@@ -13,7 +13,7 @@ export const ContactCTA = () => {
 
   return (
     <section id="contact" className="py-24 md:py-32">
-      <div ref={ref} className="reveal mx-auto max-w-5xl px-6 lg:px-10">
+      <div ref={ref} className="reveal mx-auto max-w-6xl px-6 lg:px-12">
         <form
           onSubmit={(e) => e.preventDefault()}
           className="space-y-8"
