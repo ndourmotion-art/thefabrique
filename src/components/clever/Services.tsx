@@ -37,7 +37,7 @@ const Card = ({
   return (
     <div
       ref={ref}
-      className="reveal group relative aspect-square flex items-center justify-center p-5 md:p-6 overflow-hidden transition-colors border border-white/20"
+      className="reveal group relative aspect-square flex items-center justify-center p-6 md:p-8 overflow-hidden transition-colors border border-surface-dark-foreground/30"
       style={{ transitionDelay: `${i * 60}ms` }}
     >
       <div
@@ -56,7 +56,7 @@ const Card = ({
         }}
       />
 
-      <h3 className="relative z-10 text-center font-display uppercase text-2xl md:text-3xl leading-[0.95] transition-colors duration-700"
+      <h3 className="relative z-10 text-center font-display font-bold uppercase text-2xl md:text-4xl leading-[0.95] transition-colors duration-700"
           style={{ color: on ? "#fff" : undefined }}>
         {s.title}
       </h3>
@@ -94,9 +94,9 @@ export const Services = () => {
 
   return (
     <section id="services" className="bg-surface-dark text-surface-dark-foreground py-24 md:py-36">
-      <div className="mx-auto max-w-[1400px] px-6 lg:px-10">
+      <div className="mx-auto max-w-[1600px] px-4 lg:px-6">
         <div ref={head} className="reveal max-w-3xl mb-16 md:mb-24">
-          <div className="eyebrow text-surface-dark-foreground/60 mb-5">Services & Expertise</div>
+          <div className="eyebrow text-surface-dark-foreground/80 mb-5">Services & Expertise</div>
           <h2 className="font-display uppercase text-display-lg text-7xl font-sans font-medium">
             Expertise
           </h2>

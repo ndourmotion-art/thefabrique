@@ -15,3 +15,4 @@
 - [x] Stats heading two-line bold "Numbers in / motion."; bold "+" values
 - [x] MadeWithPassion two-line "Made with / passion"
 - [x] Contact form input text darker + bolder
+- [x] Remove the Ramadan project; enlarge Expertise and About content; strengthen light text
