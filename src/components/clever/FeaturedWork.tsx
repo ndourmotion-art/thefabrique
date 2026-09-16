@@ -3,6 +3,7 @@ import { useEffect, useRef, useState } from "react";
 import { ArrowUpRight } from "lucide-react";
 import { useReveal } from "@/hooks/useReveal";
 import { projects, type Project } from "@/data/projects";
+import { Button } from "@/components/ui/button";
 
 const getVimeoId = (link?: string) => {
   if (!link) return null;
@@ -20,6 +21,7 @@ const ProjectCard = ({
   const ref = useReveal<HTMLAnchorElement>();
   const vimeoId = getVimeoId(project.link);
   const [hovered, setHovered] = useState(false);
+  const [cursor, setCursor] = useState({ x: 0, y: 0, visible: false });
   const frameRef = useRef<HTMLIFrameElement | null>(null);
   const timerRef = useRef<number | null>(null);
 
@@ -41,10 +43,23 @@ const ProjectCard = ({
   return (
     <Link
       ref={ref}
+      id={`project-${index}`}
       to={`/work/${project.slug}`}
-      className={`reveal work-project group block ${index % 2 ? "work-project--offset" : ""}`}
+      className="reveal work-project group block"
       onMouseEnter={() => setHovered(true)}
-      onMouseLeave={() => setHovered(false)}
+      onMouseLeave={() => {
+        setHovered(false);
+        setCursor((current) => ({ ...current, visible: false }));
+      }}
+      onPointerMove={(event) => {
+        if (event.pointerType !== "mouse") return;
+        const bounds = event.currentTarget.getBoundingClientRect();
+        setCursor({
+          x: event.clientX - bounds.left,
+          y: event.clientY - bounds.top,
+          visible: true,
+        });
+      }}
     >
       <article>
         <div className="work-project__media relative overflow-hidden bg-muted">
@@ -70,29 +85,26 @@ const ProjectCard = ({
           )}
 
           <div className="work-project__shade absolute inset-0" />
-          <span className="work-project__number absolute left-5 top-5 md:left-7 md:top-7">
-            {String(index + 1).padStart(2, "0")}
-          </span>
-          <span className="work-project__view absolute bottom-5 right-5 md:bottom-7 md:right-7">
+          <div className="work-project__overlay absolute inset-0 flex flex-col justify-center px-6 md:px-14">
+            <span className="eyebrow mb-4 text-primary-foreground/80">
+              {String(index + 1).padStart(2, "0")} / {String(projects.length).padStart(2, "0")}
+            </span>
+            <h3 className="work-project__title font-display uppercase font-sans font-black text-primary-foreground">
+              {project.title}
+            </h3>
+            <div className="mt-5 flex flex-wrap gap-x-5 gap-y-1 text-xs uppercase text-primary-foreground/80 md:text-sm">
+              <span>{project.client}</span>
+              <span>{project.year}</span>
+              <span>{project.tags.join(" · ")}</span>
+            </div>
+          </div>
+          <span
+            className={`work-project__view ${cursor.visible ? "is-visible" : ""}`}
+            style={{ left: cursor.x, top: cursor.y }}
+          >
             <span>View project</span>
             <ArrowUpRight className="h-5 w-5" aria-hidden="true" />
           </span>
-        </div>
-
-        <div className="work-project__caption mt-5 grid gap-3 md:grid-cols-[minmax(0,1fr)_auto] md:items-end">
-          <div>
-            <h3 className="work-project__title font-display uppercase font-sans font-medium">
-              {project.title}
-            </h3>
-            <p className="mt-3 max-w-2xl text-sm leading-relaxed text-foreground/60 md:text-base">
-              {project.description}
-            </p>
-          </div>
-          <div className="flex flex-wrap items-center gap-x-5 gap-y-1 text-xs uppercase text-foreground/60 md:justify-end md:text-sm">
-            <span>{project.client}</span>
-            <span>{project.year}</span>
-            <span>{project.tags.join(" · ")}</span>
-          </div>
         </div>
       </article>
     </Link>
@@ -102,6 +114,34 @@ const ProjectCard = ({
 
 export const FeaturedWork = () => {
   const heading = useReveal<HTMLDivElement>();
+  const [activeProject, setActiveProject] = useState(0);
+
+  useEffect(() => {
+    const projectElements = projects
+      .map((_, index) => document.getElementById(`project-${index}`))
+      .filter((element): element is HTMLElement => Boolean(element));
+    if (!projectElements.length) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const visible = entries
+          .filter((entry) => entry.isIntersecting)
+          .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+        if (!visible) return;
+        const index = Number(visible.target.id.replace("project-", ""));
+        if (Number.isFinite(index)) setActiveProject(index);
+      },
+      { threshold: [0.3, 0.55, 0.75] },
+    );
+
+    projectElements.forEach((element) => observer.observe(element));
+    return () => observer.disconnect();
+  }, []);
+
+  const scrollToProject = (index: number) => {
+    document.getElementById(`project-${index}`)?.scrollIntoView({ behavior: "smooth", block: "center" });
+  };
+
   return (
     <section id="work" className="works-showcase py-24 md:py-36">
       <div className="mx-auto max-w-[1600px] px-6 lg:px-10">
@@ -114,7 +154,9 @@ export const FeaturedWork = () => {
             Advertising, film and motion crafted to make brands impossible to overlook.
           </p>
         </div>
+      </div>
 
+      <div className="mx-auto max-w-[1600px] px-2 md:px-4">
         <div className="work-projects">
           {projects.map((p, i) => (
             <ProjectCard
@@ -125,6 +167,23 @@ export const FeaturedWork = () => {
           ))}
         </div>
       </div>
+
+      <nav className="work-project-nav" aria-label="Jump between projects">
+        {projects.map((project, index) => (
+          <Button
+            key={project.slug}
+            type="button"
+            variant="ghost"
+            size="icon"
+            aria-label={`Go to ${project.title}`}
+            aria-current={index === activeProject ? "true" : undefined}
+            onClick={() => scrollToProject(index)}
+            className="work-project-nav__button"
+          >
+            <span className="work-project-nav__line" />
+          </Button>
+        ))}
+      </nav>
     </section>
   );
 };
