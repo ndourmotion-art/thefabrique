@@ -5,9 +5,8 @@ const logo = logoAsset.url;
 import { cn } from "@/lib/utils";
 
 const links = [
-  { label: "Work", href: "#work" },
+  { label: "Works", href: "#work" },
   { label: "Services", href: "#services" },
-  { label: "Solutions", href: "#solutions" },
   { label: "About", href: "#about" },
   { label: "Contact", href: "#contact" },
 ];

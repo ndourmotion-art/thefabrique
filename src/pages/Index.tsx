@@ -2,7 +2,6 @@ import { Nav } from "@/components/clever/Nav";
 import { Hero } from "@/components/clever/Hero";
 import { FeaturedWork } from "@/components/clever/FeaturedWork";
 import { Services } from "@/components/clever/Services";
-import { Solutions } from "@/components/clever/Solutions";
 import { Stats } from "@/components/clever/Stats";
 
 import { MadeWithPassion } from "@/components/clever/MadeWithPassion";
@@ -19,7 +18,6 @@ const Index = () => {
       <Hero />
       <FeaturedWork />
       <Services />
-      <Solutions />
       <Stats />
       
       
