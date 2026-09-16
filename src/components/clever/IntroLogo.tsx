@@ -10,8 +10,9 @@ type IntroLogoProps = {
 
 export const IntroLogo = ({ revealing, onReveal, onComplete }: IntroLogoProps) => {
   useEffect(() => {
-    const revealTimer = window.setTimeout(onReveal, 2000);
-    const completeTimer = window.setTimeout(onComplete, 3200);
+    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const revealTimer = window.setTimeout(onReveal, prefersReducedMotion ? 50 : 2800);
+    const completeTimer = window.setTimeout(onComplete, prefersReducedMotion ? 100 : 5000);
     const previousOverflow = document.body.style.overflow;
     document.body.style.overflow = "hidden";
 
