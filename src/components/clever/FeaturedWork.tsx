@@ -114,7 +114,7 @@ export const FeaturedWork = () => {
       <div className="mx-auto max-w-[1400px] px-6 lg:px-10">
         <div ref={heading} className="reveal mb-12 md:mb-16">
           <div className="eyebrow text-foreground/60 mb-4">Selection</div>
-          <h2 className="font-display uppercase text-display-lg text-7xl font-sans font-medium">Our work</h2>
+          <h2 className="font-display uppercase text-display-lg text-7xl font-sans font-medium">Our works</h2>
         </div>
 
         <div className="portfolio-bento">
