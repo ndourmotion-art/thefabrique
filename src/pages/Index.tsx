@@ -33,7 +33,10 @@ const Index = () => {
       >
         <ScrollTextReveal active={introState === "complete"} />
         <Nav />
-        <Hero introVisible={introState !== "waiting"} />
+        <Hero
+          mediaVisible={introState !== "waiting"}
+          contentVisible={introState === "complete"}
+        />
         <FeaturedWork />
         <Services />
         <Stats />
