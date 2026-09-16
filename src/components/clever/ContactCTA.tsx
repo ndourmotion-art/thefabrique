@@ -50,7 +50,7 @@ export const ContactCTA = () => {
                 <option value="design-statique">Static design</option>
                 <option value="conception">Concept & Copywriting</option>
               </select>
-              <span className="pointer-events-none absolute right-5 top-1/2 -translate-y-1/2 text-foreground/50">▾</span>
+              <span className="pointer-events-none absolute right-5 top-1/2 -translate-y-1/2 font-semibold text-foreground/80">▾</span>
             </div>
           </div>
 
@@ -73,7 +73,7 @@ export const ContactCTA = () => {
                 <span className="eyebrow leading-tight">
                   Attach<br />a file<br />or brief
                 </span>
-                <span className="text-[0.65rem] uppercase tracking-widest text-foreground/40">
+                <span className="text-xs font-semibold uppercase tracking-widest text-foreground/70">
                   {fileName ?? "(Optional)"}
                 </span>
                 <input
@@ -95,7 +95,7 @@ export const ContactCTA = () => {
             </button>
           </div>
 
-          <div className="pt-4 text-sm md:text-base text-foreground/60 flex flex-wrap items-center gap-x-6 gap-y-2">
+          <div className="pt-4 text-sm md:text-base font-medium text-foreground/80 flex flex-wrap items-center gap-x-6 gap-y-2">
             <span>Send us an email</span>
             <a href="mailto:hello@cleverafrica.com" className="font-semibold text-foreground hover:text-primary transition-colors">
               hello@cleverafrica.com
