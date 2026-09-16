@@ -89,7 +89,7 @@ export const ContactCTA = () => {
           <div className="pt-4">
             <button
               type="submit"
-              className="inline-flex items-center gap-3 rounded-full bg-foreground text-background px-8 py-4 text-base font-semibold hover:bg-primary transition-colors"
+              className="inline-flex items-center gap-3 rounded-full bg-foreground text-background px-9 py-5 text-lg font-semibold hover:bg-primary transition-colors"
             >
               Send message <span aria-hidden>↗</span>
             </button>
