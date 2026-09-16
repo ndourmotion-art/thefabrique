@@ -17,7 +17,7 @@ export const Hero = () => {
           />
 
           <div className="absolute inset-0 flex flex-col justify-center px-6 md:px-14">
-            <div className="eyebrow text-background/90 mb-4 md:mb-6 text-[0.95rem] md:text-base tracking-[0.18em]">
+            <div className="eyebrow text-background/90 mt-6 md:mt-8 mb-4 md:mb-6 text-[0.7rem] md:text-sm tracking-[0.18em]">
               For brands, organizations, and startups of all sizes.
             </div>
 
