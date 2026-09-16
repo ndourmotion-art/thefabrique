@@ -56,8 +56,9 @@ const Card = ({
         }}
       />
 
-      <h3 className="relative z-10 text-center font-display font-bold uppercase text-2xl md:text-4xl leading-[0.95] transition-colors duration-700"
-          style={{ color: on ? "#fff" : undefined }}>
+      <h3 data-no-reveal
+          className="relative z-10 text-center font-display font-bold uppercase text-xl md:text-3xl leading-[1.1] transition-colors duration-700"
+          style={{ color: on ? "#fff" : undefined, wordBreak: "keep-all", overflowWrap: "normal", hyphens: "none" }}>
         {s.title}
       </h3>
     </div>
