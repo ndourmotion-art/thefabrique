@@ -41,8 +41,13 @@ function splitInto(el: HTMLElement, mode: "letter" | "word") {
   el.appendChild(frag);
 }
 
-export function ScrollTextReveal() {
+type ScrollTextRevealProps = {
+  active?: boolean;
+};
+
+export function ScrollTextReveal({ active = true }: ScrollTextRevealProps) {
   useEffect(() => {
+    if (!active) return;
     const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     if (prefersReduced) return;
 
@@ -88,7 +93,7 @@ export function ScrollTextReveal() {
       mo.disconnect();
       observer.disconnect();
     };
-  }, []);
+  }, [active]);
 
   return null;
 }

@@ -1,3 +1,4 @@
+import { useCallback, useState } from "react";
 import { Nav } from "@/components/clever/Nav";
 import { Hero } from "@/components/clever/Hero";
 import { FeaturedWork } from "@/components/clever/FeaturedWork";
@@ -9,23 +10,39 @@ import { ContactCTA } from "@/components/clever/ContactCTA";
 import { ContactBanner } from "@/components/clever/ContactBanner";
 import { Footer } from "@/components/clever/Footer";
 import { ScrollTextReveal } from "@/components/clever/ScrollTextReveal";
+import { IntroLogo } from "@/components/clever/IntroLogo";
 
 const Index = () => {
+  const [introState, setIntroState] = useState<"waiting" | "revealing" | "complete">("waiting");
+  const revealHomepage = useCallback(() => setIntroState("revealing"), []);
+  const completeIntro = useCallback(() => setIntroState("complete"), []);
+
   return (
-    <main className="min-h-screen bg-background text-foreground">
-      <ScrollTextReveal />
-      <Nav />
-      <Hero />
-      <FeaturedWork />
-      <Services />
-      <Stats />
-      
-      
-      <MadeWithPassion />
-      <ContactCTA />
-      <ContactBanner />
-      <Footer />
-    </main>
+    <>
+      {introState !== "complete" && (
+        <IntroLogo
+          revealing={introState === "revealing"}
+          onReveal={revealHomepage}
+          onComplete={completeIntro}
+        />
+      )}
+      <main
+        className={`home-intro-content min-h-screen bg-background text-foreground ${
+          introState !== "waiting" ? "home-intro-content--visible" : ""
+        }`}
+      >
+        <ScrollTextReveal active={introState === "complete"} />
+        <Nav />
+        <Hero introVisible={introState !== "waiting"} />
+        <FeaturedWork />
+        <Services />
+        <Stats />
+        <MadeWithPassion />
+        <ContactCTA />
+        <ContactBanner />
+        <Footer />
+      </main>
+    </>
   );
 };
 
