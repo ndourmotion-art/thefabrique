@@ -4,6 +4,7 @@ import { Footer } from "@/components/clever/Footer";
 import { useReveal } from "@/hooks/useReveal";
 import { ScrollTextReveal } from "@/components/clever/ScrollTextReveal";
 import { getProject, projects } from "@/data/projects";
+import { GalleryCarousel } from "@/components/clever/GalleryCarousel";
 
 const ProjectPage = () => {
   const { slug = "" } = useParams();
@@ -78,17 +79,8 @@ const ProjectPage = () => {
         </section>
 
 
-        <section className="mx-auto max-w-[1600px] px-6 lg:px-10 pb-24 md:pb-36 grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8">
-          {project.gallery.map((src, i) => (
-            <div key={i} className="rounded-2xl bg-muted overflow-hidden">
-              <img
-                src={src}
-                alt={`${project.title} ${i + 1}`}
-                loading="lazy"
-                className="w-full h-full aspect-video object-cover"
-              />
-            </div>
-          ))}
+        <section className="mx-auto max-w-[1600px] px-6 lg:px-10 pb-24 md:pb-36">
+          <GalleryCarousel images={project.gallery} title={project.title} />
         </section>
 
         <section className="mx-auto max-w-[1600px] px-6 lg:px-10 pb-20 md:pb-28">
