@@ -175,8 +175,9 @@
 }
 .home-intro-content--visible {
   opacity: 1;
-  filter: blur(0);
-  transform: scale(1);
+  filter: none;
+  transform: none;
+  will-change: auto;
 }
 .hero-opening__media,
 .hero-opening__line,
@@ -312,7 +313,7 @@
   cursor: none;
 }
 .work-project__media {
-  aspect-ratio: 16 / 10;
+  aspect-ratio: 16 / 6;
   border-radius: 1rem;
   isolation: isolate;
 }
@@ -405,7 +406,7 @@
 
 @media (max-width: 768px) {
   .work-project__media {
-    aspect-ratio: 4 / 3;
+    aspect-ratio: 16 / 9;
   }
   .work-project__view {
     display: none;
