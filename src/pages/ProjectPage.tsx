@@ -52,7 +52,7 @@ const ProjectPage = () => {
 
         <div className="mx-auto max-w-[1600px] px-2 md:px-4">
           {project.video ? (
-            <div className="relative aspect-[4/3] md:aspect-[16/10] w-full overflow-hidden rounded-2xl bg-foreground">
+            <div className="relative aspect-video w-full overflow-hidden rounded-2xl bg-foreground">
               <video
                 src={project.video}
                 poster={project.image}
