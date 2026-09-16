@@ -9,3 +9,4 @@
 
 ## Done
 - [x] WordPress one-page theme files (style.css, index.php, functions.php, header/footer/front-page, customizer)
+- [x] Rework the Works section into a cinematic editorial project showcase
