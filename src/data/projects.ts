@@ -12,13 +12,19 @@ const muna2 = { url: "/media/muna2.jpg" };
 const muna3 = { url: "/media/muna3.jpg" };
 const muna4 = { url: "/media/muna4.jpg" };
 const ads3 = { url: "/media/ads3.jpg" };
-const can2023 = { url: "/media/can2023.jpg" };
+import buizAiVideo from "@/assets/buiz-ai.mp4.asset.json";
+import buizAi01 from "@/assets/buiz-ai-01.png.asset.json";
+import buizAi02 from "@/assets/buiz-ai-02.png.asset.json";
+import buizAi03 from "@/assets/buiz-ai-03.png.asset.json";
+import buizAi04 from "@/assets/buiz-ai-04.png.asset.json";
+import buizAi05 from "@/assets/buiz-ai-05.png.asset.json";
 
 export type Project = {
   slug: string;
   title: string;
   tags: string[];
   image: string;
+  video?: string;
   link?: string;
   client: string;
   year: string;
@@ -124,17 +130,17 @@ export const projects: Project[] = [
     gallery: [ads3.url],
   },
   {
-    slug: "madar-can-2023",
-    title: "Madar CAN 2023 — Ivory Coast",
-    tags: ["Advertising", "3D Animation"],
-    image: can2023.url,
-    link: "https://vimeo.com/941250347?fl=pl&fe=sh",
-    client: "Madar",
-    year: "2024",
-    role: "Direction, 3D Animation",
+    slug: "buiz-ai-experimental",
+    title: "Buiz Ai\nEXPERIMENTAL",
+    tags: ["Motion Design", "Experimental"],
+    image: buizAi01.url,
+    video: buizAiVideo.url,
+    client: "Buiz.ai",
+    year: "2026",
+    role: "Art Direction, Motion Design",
     description:
-      "A Madar campaign for CAN 2023 in Ivory Coast, blending football and brand world in a dynamic 3D animation.",
-    gallery: [can2023.url],
+      "An experimental motion design project created for the Buiz.ai experience.",
+    gallery: [buizAi01.url, buizAi02.url, buizAi03.url, buizAi04.url, buizAi05.url],
   },
 ];
 

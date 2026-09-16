@@ -39,7 +39,7 @@ const ProjectPage = () => {
       <article>
         <header ref={heading} className="reveal pt-36 md:pt-44 pb-12 md:pb-16 mx-auto max-w-[1400px] px-6 lg:px-10">
           <Link to="/#work" className="text-sm text-foreground/60 hover:text-foreground">← All work</Link>
-          <h1 className="font-display uppercase text-4xl md:text-6xl lg:text-7xl font-black leading-[0.95] mt-6">
+          <h1 data-no-reveal className="whitespace-pre-line font-display uppercase text-4xl md:text-6xl lg:text-7xl font-black leading-[0.95] mt-6">
             {project.title}
           </h1>
           <div className="mt-6 flex flex-wrap gap-x-6 gap-y-2 text-sm text-foreground/70">
@@ -51,7 +51,18 @@ const ProjectPage = () => {
 
 
         <div className="mx-auto max-w-[1400px] px-6 lg:px-10">
-          {project.link ? (
+          {project.video ? (
+            <div className="relative aspect-video overflow-hidden rounded-2xl bg-foreground">
+              <video
+                src={project.video}
+                poster={project.image}
+                controls
+                playsInline
+                className="absolute inset-0 h-full w-full object-contain"
+                aria-label={`${project.title.replace("\n", " ")} project video`}
+              />
+            </div>
+          ) : project.link ? (
             (() => {
               const match = project.link.match(/vimeo\.com\/(\d+)/);
               const vid = match?.[1];
@@ -108,7 +119,7 @@ const ProjectPage = () => {
                     />
                     <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-colors duration-200" />
                   </div>
-                  <h3 className="mt-3 font-display uppercase text-sm md:text-base leading-tight group-hover:text-primary transition-colors">
+                  <h3 className="mt-3 whitespace-pre-line font-display uppercase text-sm md:text-base leading-tight group-hover:text-primary transition-colors">
                     {p.title}
                   </h3>
                   <p className="mt-1 text-xs text-foreground/60">{p.tags.join(" • ")}</p>

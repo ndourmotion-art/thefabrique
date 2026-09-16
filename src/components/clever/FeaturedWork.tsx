@@ -84,12 +84,25 @@ const ProjectCard = ({
             </div>
           )}
 
+          {project.video && hovered && (
+            <video
+              src={project.video}
+              poster={project.image}
+              autoPlay
+              muted
+              loop
+              playsInline
+              aria-hidden="true"
+              className="absolute inset-0 h-full w-full object-cover pointer-events-none"
+            />
+          )}
+
           <div className="work-project__shade absolute inset-0" />
           <div className="work-project__overlay absolute inset-0 flex flex-col justify-center px-6 md:px-14">
             <span className="eyebrow mb-4 text-primary-foreground/80">
               {String(index + 1).padStart(2, "0")} / {String(projects.length).padStart(2, "0")}
             </span>
-            <h3 data-no-reveal className="work-project__title font-display uppercase font-sans font-black text-primary-foreground">
+            <h3 data-no-reveal className="work-project__title whitespace-pre-line font-display uppercase font-sans font-black text-primary-foreground">
               {project.title}
             </h3>
             <div className="mt-5 flex flex-wrap gap-x-5 gap-y-1 text-xs uppercase text-primary-foreground/80 md:text-sm">

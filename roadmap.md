@@ -16,3 +16,4 @@
 - [x] MadeWithPassion two-line "Made with / passion"
 - [x] Contact form input text darker + bolder
 - [x] Remove the Ramadan project; enlarge Expertise and About content; strengthen light text
+- [x] Replace Madar CAN 2023 with the Buiz Ai Experimental video project and gallery
