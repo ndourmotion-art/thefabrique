@@ -89,7 +89,7 @@ const ProjectCard = ({
             <span className="eyebrow mb-4 text-primary-foreground/80">
               {String(index + 1).padStart(2, "0")} / {String(projects.length).padStart(2, "0")}
             </span>
-            <h3 className="work-project__title font-display uppercase font-sans font-black text-primary-foreground">
+            <h3 data-no-reveal className="work-project__title font-display uppercase font-sans font-black text-primary-foreground">
               {project.title}
             </h3>
             <div className="mt-5 flex flex-wrap gap-x-5 gap-y-1 text-xs uppercase text-primary-foreground/80 md:text-sm">

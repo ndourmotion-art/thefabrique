@@ -8,7 +8,7 @@ export const ContactCTA = () => {
   const [fileName, setFileName] = useState<string | null>(null);
 
   const inputClass =
-    "w-full rounded-2xl bg-muted/60 border border-foreground/10 px-5 py-4 text-base text-foreground placeholder:text-foreground/40 focus:outline-none focus:ring-2 focus:ring-primary/40 focus:border-transparent transition";
+    "w-full rounded-2xl bg-muted/60 border border-foreground/10 px-5 py-4 text-base text-foreground font-medium placeholder:text-foreground/55 focus:outline-none focus:ring-2 focus:ring-primary/40 focus:border-transparent transition";
   const labelClass = "block eyebrow text-foreground/60 mb-3";
 
   return (
