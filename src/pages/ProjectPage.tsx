@@ -50,9 +50,9 @@ const ProjectPage = () => {
         </header>
 
 
-        <div className="mx-auto max-w-[1400px] px-6 lg:px-10">
+        <div className="mx-auto max-w-[1600px] px-2 md:px-4">
           {project.video ? (
-            <div className="relative aspect-video overflow-hidden rounded-2xl bg-foreground">
+            <div className="relative aspect-[4/3] md:aspect-[16/10] w-full overflow-hidden rounded-2xl bg-foreground">
               <video
                 src={project.video}
                 poster={project.image}
@@ -67,7 +67,7 @@ const ProjectPage = () => {
               const match = project.link.match(/vimeo\.com\/(\d+)/);
               const vid = match?.[1];
               return vid ? (
-                <div className="relative aspect-video overflow-hidden rounded-2xl bg-black">
+                <div className="relative aspect-[4/3] md:aspect-[16/10] w-full overflow-hidden rounded-2xl bg-black">
                   <iframe
                     src={`https://player.vimeo.com/video/${vid}`}
                     className="absolute inset-0 h-full w-full"
@@ -77,13 +77,13 @@ const ProjectPage = () => {
                   />
                 </div>
               ) : (
-                <div className="relative aspect-[16/9] overflow-hidden rounded-2xl bg-muted">
+                <div className="relative aspect-[4/3] md:aspect-[16/10] w-full overflow-hidden rounded-2xl bg-muted">
                   <img src={project.image} alt={project.title} className="absolute inset-0 h-full w-full object-cover" />
                 </div>
               );
             })()
           ) : (
-            <div className="relative aspect-[16/9] overflow-hidden rounded-2xl bg-muted">
+            <div className="relative aspect-[4/3] md:aspect-[16/10] w-full overflow-hidden rounded-2xl bg-muted">
               <img src={project.image} alt={project.title} className="absolute inset-0 h-full w-full object-cover" />
             </div>
           )}
