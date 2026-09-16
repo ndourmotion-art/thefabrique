@@ -17,12 +17,18 @@ const WrittenLine = ({ text, start }: { text: string; start: number }) => (
 );
 
 type HeroProps = {
-  introVisible?: boolean;
+  mediaVisible?: boolean;
+  contentVisible?: boolean;
 };
 
-export const Hero = ({ introVisible = true }: HeroProps) => {
+export const Hero = ({ mediaVisible = true, contentVisible = true }: HeroProps) => {
   return (
-    <section id="top" className={`hero-opening relative pt-20 md:pt-24 pb-16 md:pb-24 overflow-hidden ${introVisible ? "hero-opening--visible" : ""}`}>
+    <section
+      id="top"
+      className={`hero-opening relative pt-20 md:pt-24 pb-16 md:pb-24 overflow-hidden ${
+        mediaVisible ? "hero-opening--media-visible" : ""
+      } ${contentVisible ? "hero-opening--content-visible" : ""}`}
+    >
       <div className="mx-auto max-w-[1600px] px-2 md:px-4">
         <div className="hero-opening__media relative aspect-[4/3] md:aspect-[16/10] w-full overflow-hidden rounded-2xl bg-muted">
           <img
