@@ -8,8 +8,8 @@ export const ContactCTA = () => {
   const [fileName, setFileName] = useState<string | null>(null);
 
   const inputClass =
-    "w-full rounded-2xl bg-muted/60 border border-foreground/10 px-5 py-4 text-base text-foreground font-medium placeholder:text-foreground/55 focus:outline-none focus:ring-2 focus:ring-primary/40 focus:border-transparent transition";
-  const labelClass = "block eyebrow text-foreground/60 mb-3";
+    "w-full rounded-2xl bg-foreground/10 border border-foreground/10 px-6 py-5 text-lg text-foreground font-semibold placeholder:text-foreground/60 focus:outline-none focus:ring-2 focus:ring-primary/40 focus:border-transparent transition";
+  const labelClass = "block eyebrow text-foreground/70 mb-3 font-semibold";
 
   return (
     <section id="contact" className="py-24 md:py-32">
