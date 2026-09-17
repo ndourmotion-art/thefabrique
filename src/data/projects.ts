@@ -113,26 +113,13 @@ export const projects: Project[] = [
     title: "Madar\nAIR FRESHENER",
     tags: ["Advertising", "Motion"],
     image: madarAirPoster.url,
-    video: madarAirVideo.url,
+    link: "https://vimeo.com/1227731457",
     client: "Madar",
     year: "2026",
     role: "Direction, Production",
     description:
       "A campaign for Madar's air freshener line, bringing freshness and motion to the brand.",
     gallery: [madarAirPoster.url],
-  },
-  {
-    slug: "madar-qatar-2022",
-    title: "Madar\nQATAR 2022",
-    tags: ["Advertising", "Film"],
-    image: madarQatarPoster.url,
-    video: madarQatarVideo.url,
-    client: "Madar",
-    year: "2022",
-    role: "Direction, Production",
-    description:
-      "A spot produced for Madar's Qatar 2022 campaign, blending dynamic visuals with the brand's energy.",
-    gallery: [madarQatarPoster.url],
   },
   {
     slug: "cooperation-sino-africaine-mali",
