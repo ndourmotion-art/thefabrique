@@ -18,7 +18,7 @@
     --popover-foreground: 0 0% 6%;
 
     /* Brand blue from logo (#4314DF) */
-    --primary: 230 90% 53%;           /* #1F3DEB-ish */
+    --primary: 254 84% 48%;           /* #4314DF */
     --primary-foreground: 0 0% 97%;
 
     /* Brand green accent from logo */
@@ -36,7 +36,7 @@
 
     --border: 0 0% 6% / 0.12;
     --input: 0 0% 80%;
-    --ring: 230 90% 53%;
+    --ring: 254 84% 48%;
 
     --radius: 0.75rem;
 
@@ -61,7 +61,7 @@
     --card-foreground: 44 33% 95%;
     --popover: 0 0% 8%;
     --popover-foreground: 44 33% 95%;
-    --primary: 230 90% 60%;
+    --primary: 254 84% 60%;
     --primary-foreground: 0 0% 6%;
     --accent: 150 92% 45%;
     --accent-foreground: 0 0% 6%;
@@ -73,7 +73,7 @@
     --destructive-foreground: 44 33% 95%;
     --border: 44 33% 95% / 0.12;
     --input: 0 0% 18%;
-    --ring: 230 90% 60%;
+    --ring: 254 84% 60%;
   }
 }
 
