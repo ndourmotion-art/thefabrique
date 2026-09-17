@@ -157,9 +157,15 @@ export const FeaturedWork = () => {
             <div className="eyebrow text-foreground/60 mb-4">Selected projects</div>
             <h2 className="font-display uppercase text-display-lg text-7xl font-sans font-medium">Featured works</h2>
           </div>
-          <p className="hidden max-w-sm text-right text-base leading-relaxed text-foreground/60 md:block">
-            Advertising, film and motion crafted to make brands impossible to overlook.
-          </p>
+          <Button
+            asChild
+            className="rounded-full bg-foreground px-8 py-6 text-sm font-extrabold uppercase tracking-wide text-background hover:bg-accent hover:text-accent-foreground md:px-10 md:text-base"
+          >
+            <Link to="/works">
+              View all works
+              <ArrowUpRight className="h-5 w-5" aria-hidden="true" />
+            </Link>
+          </Button>
         </div>
       </div>
 
