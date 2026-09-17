@@ -1,4 +1,4 @@
-import bannerAsset from "@/assets/banniere-2.jpg.asset.json";
+import bannerAsset from "/media/banniere-2.jpg.asset.json";
 
 export const ContactBanner = () => {
   return (
