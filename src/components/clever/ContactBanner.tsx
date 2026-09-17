@@ -4,7 +4,7 @@ export const ContactBanner = () => {
     <section className="py-8 md:py-12 bg-background">
       <div className="mx-auto max-w-[1600px] px-6 lg:px-10">
         <img
-          src="/media/banniere-2.jpg"
+          src="/media/banniere.jpg"
           alt="The FABRIQUE — Be impactful with us"
           className="w-full h-auto rounded-2xl"
           loading="lazy"
