@@ -13,6 +13,8 @@ const muna3 = { url: "/media/muna3.jpg" };
 const muna4 = { url: "/media/muna4.jpg" };
 const ads3 = { url: "/media/ads3.jpg" };
 import buizAiVideo from "@/assets/buiz-ai.mp4.asset.json";
+import madarAirVideo from "@/assets/madar-air-freshener.mov.asset.json";
+import madarAirPoster from "@/assets/madar-air-freshener.jpg.asset.json";
 const buizAi01 = { url: "/media/buiz-ai-01.png" };
 const buizAi02 = { url: "/media/buiz-ai-02.png" };
 const buizAi03 = { url: "/media/buiz-ai-03.png" };
@@ -103,6 +105,19 @@ export const projects: Project[] = [
     description:
       "A festive campaign for Madar blending light, sparkle, and the magic of Christmas.",
     gallery: [noelMadarPreview.url],
+  },
+  {
+    slug: "madar-air-freshener",
+    title: "Madar\nAIR FRESHENER",
+    tags: ["Advertising", "Motion"],
+    image: madarAirPoster.url,
+    video: madarAirVideo.url,
+    client: "Madar",
+    year: "2026",
+    role: "Direction, Production",
+    description:
+      "A campaign for Madar's air freshener line, bringing freshness and motion to the brand.",
+    gallery: [madarAirPoster.url],
   },
   {
     slug: "cooperation-sino-africaine-mali",
