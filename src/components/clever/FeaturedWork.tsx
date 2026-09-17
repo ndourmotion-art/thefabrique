@@ -174,6 +174,18 @@ export const FeaturedWork = () => {
 
       </div>
 
+      <div className="mx-auto max-w-[1600px] px-6 lg:px-10 mt-16 flex justify-center">
+        <Button
+          asChild
+          className="rounded-full bg-foreground px-8 py-6 text-sm font-extrabold uppercase tracking-wide text-background hover:bg-accent hover:text-accent-foreground md:px-10 md:text-base"
+        >
+          <Link to="/works">
+            View all works
+            <ArrowUpRight className="h-5 w-5" aria-hidden="true" />
+          </Link>
+        </Button>
+      </div>
+
       <nav className="work-project-nav" aria-label="Jump between projects">
         {projects.map((project, index) => (
           <Button
