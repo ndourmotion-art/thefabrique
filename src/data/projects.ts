@@ -107,6 +107,19 @@ export const projects: Project[] = [
     gallery: [noelMadarPreview.url],
   },
   {
+    slug: "madar-air-freshener",
+    title: "Madar\nAIR FRESHENER",
+    tags: ["Advertising", "Motion"],
+    image: madarAirPoster.url,
+    video: madarAirVideo.url,
+    client: "Madar",
+    year: "2026",
+    role: "Direction, Production",
+    description:
+      "A campaign for Madar's air freshener line, bringing freshness and motion to the brand.",
+    gallery: [madarAirPoster.url],
+  },
+  {
     slug: "cooperation-sino-africaine-mali",
     title: "Sino-African Cooperation in Mali",
     tags: ["Documentary", "Motion Design"],
