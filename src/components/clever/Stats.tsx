@@ -51,7 +51,10 @@ export const Stats = () => {
           {testimonials.map((t) => (
             <div key={t.author} className="rounded-2xl border border-foreground/15 p-6">
               <p className="font-display normal-case font-semibold text-xl md:text-2xl leading-snug">"{t.quote}"</p>
-              <div className="mt-4 eyebrow text-foreground/80">— {t.author}</div>
+              <div className="mt-4 eyebrow text-foreground/80">
+                — {t.author}
+                {t.org && <span className="block text-foreground/60">{t.org}</span>}
+              </div>
             </div>
 
           ))}
