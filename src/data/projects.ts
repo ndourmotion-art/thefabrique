@@ -157,7 +157,7 @@ export const projects: Project[] = [
     role: "Direction, Motion",
     description:
       "A documentary film tracing Sino-African economic cooperation in Mali.",
-    gallery: [sinoMaliPreview.url],
+    gallery: [sino1.url, sino2.url, sino3.url, sino4.url, sino5.url, sino6.url, sino7.url, sino8.url, sino9.url],
   },
   {
     slug: "le-jardin-muna",
