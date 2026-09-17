@@ -6,7 +6,8 @@ const adsShot4 = { url: "/media/ads-mobility-123223.png" };
 const jet7xPreview = { url: "/media/jet7x.jpg" };
 const championsPreview = { url: "/media/les-champions.jpg" };
 const noelMadarPreview = { url: "/media/noel-madar.jpg" };
-const sinoMaliPreview = { url: "/media/sino-africaine-mali.jpg" };
+import sinoMaliAsset from "@/assets/sino-africaine-mali.jpg.asset.json";
+const sinoMaliPreview = { url: sinoMaliAsset.url };
 const muna1 = { url: "/media/muna1.jpg" };
 const muna2 = { url: "/media/muna2.jpg" };
 const muna3 = { url: "/media/muna3.jpg" };
@@ -144,16 +145,16 @@ export const projects: Project[] = [
     gallery: [muna1.url, muna2.url, muna3.url, muna4.url],
   },
   {
-    slug: "ads-centre-appel",
-    title: "ADS Call Center",
-    tags: ["Advertising", "Film"],
+    slug: "unhcr-refugees-short-film",
+    title: "UNHCR\nRefugees short film",
+    tags: ["Documentary", "Film"],
     image: ads3.url,
-    link: "https://vimeo.com/1206991529?fl=pl&fe=sh",
-    client: "ADS",
+    link: "https://vimeo.com/995526353?fl=pl&fe=sh",
+    client: "UNHCR",
     year: "2025",
     role: "Direction, Production",
     description:
-      "A commercial film for ADS highlighting the call center service and the team's commitment on the ground.",
+      "A short film produced for UNHCR, telling the stories of refugees with humanity and dignity.",
     gallery: [ads3.url],
   },
 ];
