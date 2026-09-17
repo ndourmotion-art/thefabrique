@@ -13,10 +13,7 @@ const muna3 = { url: "/media/muna3.jpg" };
 const muna4 = { url: "/media/muna4.jpg" };
 const ads3 = { url: "/media/ads3.jpg" };
 import buizAiVideo from "@/assets/buiz-ai.mp4.asset.json";
-import madarAirVideo from "@/assets/madar-air-freshener.mov.asset.json";
 import madarAirPoster from "@/assets/madar-air-freshener.jpg.asset.json";
-import madarQatarVideo from "@/assets/madar-qatar-2022.mp4.asset.json";
-import madarQatarPoster from "@/assets/madar-qatar-2022.jpg.asset.json";
 const buizAi01 = { url: "/media/buiz-ai-01.png" };
 const buizAi02 = { url: "/media/buiz-ai-02.png" };
 const buizAi03 = { url: "/media/buiz-ai-03.png" };
@@ -113,26 +110,13 @@ export const projects: Project[] = [
     title: "Madar\nAIR FRESHENER",
     tags: ["Advertising", "Motion"],
     image: madarAirPoster.url,
-    video: madarAirVideo.url,
+    link: "https://vimeo.com/1227731457",
     client: "Madar",
     year: "2026",
     role: "Direction, Production",
     description:
       "A campaign for Madar's air freshener line, bringing freshness and motion to the brand.",
     gallery: [madarAirPoster.url],
-  },
-  {
-    slug: "madar-qatar-2022",
-    title: "Madar\nQATAR 2022",
-    tags: ["Advertising", "Film"],
-    image: madarQatarPoster.url,
-    video: madarQatarVideo.url,
-    client: "Madar",
-    year: "2022",
-    role: "Direction, Production",
-    description:
-      "A spot produced for Madar's Qatar 2022 campaign, blending dynamic visuals with the brand's energy.",
-    gallery: [madarQatarPoster.url],
   },
   {
     slug: "cooperation-sino-africaine-mali",
