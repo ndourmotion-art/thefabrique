@@ -1,11 +1,10 @@
-import bannerAsset from "/media/banniere-2.jpg.asset.json";
-
+```jsx
 export const ContactBanner = () => {
   return (
     <section className="py-8 md:py-12 bg-background">
       <div className="mx-auto max-w-[1600px] px-6 lg:px-10">
         <img
-          src={bannerAsset.url}
+          src="/media/banniere-2.jpg"
           alt="The FABRIQUE — Be impactful with us"
           className="w-full h-auto rounded-2xl"
           loading="lazy"
@@ -14,3 +13,4 @@ export const ContactBanner = () => {
     </section>
   );
 };
+```
