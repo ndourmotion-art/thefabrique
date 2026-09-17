@@ -157,14 +157,14 @@ export const projects: Project[] = [
     slug: "unhcr-refugees-short-film",
     title: "UNHCR\nRefugees short film",
     tags: ["Documentary", "Film"],
-    image: ads3.url,
+    image: un1.url,
     link: "https://vimeo.com/995526353?fl=pl&fe=sh",
     client: "UNHCR",
     year: "2025",
     role: "Direction, Production",
     description:
       "A short film produced for UNHCR, telling the stories of refugees with humanity and dignity.",
-    gallery: [ads3.url],
+    gallery: [un1.url, un3.url, un4.url, un5.url, un6.url],
   },
 ];
 
