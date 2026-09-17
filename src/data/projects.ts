@@ -35,6 +35,19 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+    slug: "buiz-ai-experimental",
+    title: "Buiz Ai\nEXPERIMENTAL",
+    tags: ["Motion Design", "Experimental"],
+    image: buizAi01.url,
+    video: buizAiVideo.url,
+    client: "Buiz.ai",
+    year: "2026",
+    role: "Art Direction, Motion Design",
+    description:
+      "An experimental motion design project created for the Buiz.ai experience.",
+    gallery: [buizAi01.url, buizAi02.url, buizAi03.url, buizAi04.url, buizAi05.url],
+  },
+  {
     slug: "project-a",
     title: "ADS Mobility",
     tags: ["Advertising", "Art Direction"],
@@ -128,19 +141,6 @@ export const projects: Project[] = [
     description:
       "A commercial film for ADS highlighting the call center service and the team's commitment on the ground.",
     gallery: [ads3.url],
-  },
-  {
-    slug: "buiz-ai-experimental",
-    title: "Buiz Ai\nEXPERIMENTAL",
-    tags: ["Motion Design", "Experimental"],
-    image: buizAi01.url,
-    video: buizAiVideo.url,
-    client: "Buiz.ai",
-    year: "2026",
-    role: "Art Direction, Motion Design",
-    description:
-      "An experimental motion design project created for the Buiz.ai experience.",
-    gallery: [buizAi01.url, buizAi02.url, buizAi03.url, buizAi04.url, buizAi05.url],
   },
 ];
 
