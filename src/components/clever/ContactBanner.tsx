@@ -1,4 +1,3 @@
-```jsx
 export const ContactBanner = () => {
   return (
     <section className="py-8 md:py-12 bg-background">
@@ -13,4 +12,3 @@ export const ContactBanner = () => {
     </section>
   );
 };
-```
