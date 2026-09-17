@@ -97,7 +97,7 @@ export const Services = () => {
     <section id="services" className="bg-surface-dark text-surface-dark-foreground py-24 md:py-36">
       <div className="mx-auto max-w-[1600px] px-4 lg:px-6">
         <div ref={head} className="reveal max-w-3xl mb-16 md:mb-24">
-          <h2 className="font-display uppercase text-display-lg text-7xl font-sans font-medium">
+          <h2 className="font-display uppercase text-display-lg text-7xl font-sans font-medium" style={{ color: "#68FF5D" }}>
             Expertise
           </h2>
         </div>
