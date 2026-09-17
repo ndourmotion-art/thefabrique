@@ -21,7 +21,7 @@ const testimonials = [
   {
     quote: "A creative, responsive, and attentive team. Simply the best we've ever worked with.",
     author: "M. Taleb",
-    org: "",
+    org: "H&D Industries",
   },
 ];
 
