@@ -152,20 +152,11 @@ export const FeaturedWork = () => {
   return (
     <section id="work" className="works-showcase py-24 md:py-36">
       <div className="mx-auto max-w-[1600px] px-6 lg:px-10">
-        <div ref={heading} className="reveal mb-16 flex items-end justify-between gap-8 md:mb-24">
+        <div ref={heading} className="reveal mb-16 flex items-end gap-8 md:mb-24">
           <div>
             <div className="eyebrow text-foreground/60 mb-4">Selected projects</div>
             <h2 className="font-display uppercase text-display-lg text-7xl font-sans font-medium">Featured works</h2>
           </div>
-          <Button
-            asChild
-            className="rounded-full bg-foreground px-8 py-6 text-sm font-extrabold uppercase tracking-wide text-background hover:bg-accent hover:text-accent-foreground md:px-10 md:text-base"
-          >
-            <Link to="/works">
-              View all works
-              <ArrowUpRight className="h-5 w-5" aria-hidden="true" />
-            </Link>
-          </Button>
         </div>
       </div>
 
@@ -181,6 +172,18 @@ export const FeaturedWork = () => {
           ))}
         </div>
 
+      </div>
+
+      <div className="mx-auto max-w-[1600px] px-6 lg:px-10 mt-16 flex justify-center">
+        <Button
+          asChild
+          className="rounded-full bg-foreground px-8 py-6 text-sm font-extrabold uppercase tracking-wide text-background hover:bg-accent hover:text-accent-foreground md:px-10 md:text-base"
+        >
+          <Link to="/works">
+            View all works
+            <ArrowUpRight className="h-5 w-5" aria-hidden="true" />
+          </Link>
+        </Button>
       </div>
 
       <nav className="work-project-nav" aria-label="Jump between projects">
