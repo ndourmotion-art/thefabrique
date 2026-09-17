@@ -49,11 +49,11 @@ export const Stats = () => {
 
         <div className="mt-12 grid md:grid-cols-3 gap-6">
           {testimonials.map((t) => (
-            <div key={t.author} className="rounded-2xl border border-foreground/15 p-6">
-              <p className="font-display normal-case font-semibold text-xl md:text-2xl leading-snug">"{t.quote}"</p>
-              <div className="mt-4 eyebrow text-foreground/80">
+            <div key={t.author} className="rounded-2xl bg-[#4314DF] p-6">
+              <p className="font-display normal-case font-semibold text-xl md:text-2xl leading-snug text-white">"{t.quote}"</p>
+              <div className="mt-4 eyebrow text-white/80">
                 — {t.author}
-                {t.org && <span className="block text-foreground/60">{t.org}</span>}
+                {t.org && <span className="block text-white/60">{t.org}</span>}
               </div>
             </div>
 
