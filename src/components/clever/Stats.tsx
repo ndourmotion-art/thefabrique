@@ -8,9 +8,21 @@ const stats = [
 ];
 
 const testimonials = [
-  { quote: "A creative, responsive, and attentive team.", author: "Awa D." },
-  { quote: "A result beyond our expectations.", author: "Moussa S." },
-  { quote: "Fresh ideas that make a difference.", author: "Fatou N." },
+  {
+    quote: "The team successfully delivered the production of the USAID Health Program film to our satisfaction.",
+    author: "C.S. Sarr",
+    org: "USAID",
+  },
+  {
+    quote: "They fulfilled their contractual obligations professionally, in accordance with industry standards and with the high level of quality required.",
+    author: "R. Kane",
+    org: "European Union",
+  },
+  {
+    quote: "A creative, responsive, and attentive team. Simply the best we've ever worked with.",
+    author: "M. Taleb",
+    org: "",
+  },
 ];
 
 export const Stats = () => {
