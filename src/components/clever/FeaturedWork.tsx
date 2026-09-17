@@ -155,7 +155,7 @@ export const FeaturedWork = () => {
         <div ref={heading} className="reveal mb-16 flex items-end justify-between gap-8 md:mb-24">
           <div>
             <div className="eyebrow text-foreground/60 mb-4">Selected projects</div>
-            <h2 className="font-display uppercase text-display-lg text-7xl font-sans font-medium">Our works</h2>
+            <h2 className="font-display uppercase text-display-lg text-7xl font-sans font-medium">Featured works</h2>
           </div>
           <p className="hidden max-w-sm text-right text-base leading-relaxed text-foreground/60 md:block">
             Advertising, film and motion crafted to make brands impossible to overlook.

@@ -56,7 +56,7 @@ export const Hero = ({ mediaVisible = true, contentVisible = true }: HeroProps) 
                 href="#work"
                 className="group inline-flex items-center gap-3 rounded-full bg-background text-foreground pl-6 pr-2 py-2 text-base font-medium hover:bg-background/90 transition-colors"
               >
-                View work
+                View Works
                 <span className="h-9 w-9 rounded-full bg-foreground text-background flex items-center justify-center group-hover:rotate-45 transition-transform">
                   ↗
                 </span>

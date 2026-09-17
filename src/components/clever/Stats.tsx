@@ -31,7 +31,7 @@ export const Stats = () => {
     <section id="about" className="py-24 md:py-36">
       <div className="mx-auto max-w-[1600px] px-4 lg:px-6">
         <div ref={ref} className="reveal">
-          <div className="eyebrow text-foreground/80 mb-5">About the studio</div>
+          <div className="eyebrow text-foreground/80 mb-5">About the agency</div>
           <h2 className="font-display uppercase text-display-lg font-bold max-w-4xl">
             <span className="block">Numbers in</span>
             <span className="block">motion.</span>
@@ -49,11 +49,11 @@ export const Stats = () => {
 
         <div className="mt-12 grid md:grid-cols-3 gap-6">
           {testimonials.map((t) => (
-            <div key={t.author} className="rounded-2xl bg-[#4314DF] p-6">
-              <p className="font-display normal-case font-semibold text-xl md:text-2xl leading-snug text-white">"{t.quote}"</p>
-              <div className="mt-4 eyebrow text-white/80">
+            <div key={t.author} className="rounded-2xl bg-white border border-foreground/15 p-6">
+              <p className="font-display normal-case font-semibold text-xl md:text-2xl leading-snug text-[#4314DF]">"{t.quote}"</p>
+              <div className="mt-4 eyebrow text-[#4314DF]/80">
                 — {t.author}
-                {t.org && <span className="block text-white/60">{t.org}</span>}
+                {t.org && <span className="block text-[#4314DF]/60">{t.org}</span>}
               </div>
             </div>
 
