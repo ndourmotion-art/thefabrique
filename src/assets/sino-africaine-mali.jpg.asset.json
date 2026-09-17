@@ -1,11 +1,11 @@
 {
-  "asset_id": "bcd7ae92-51c5-44b8-bf29-9b0a134f8cb7",
-  "content_type": "image/jpeg",
-  "created_at": "2026-07-04T13:45:14Z",
-  "original_filename": "sino-africaine-mali.jpg",
+  "version": 1,
+  "asset_id": "7189b6e4-7a1e-41f4-9fab-a09ee16965f0",
   "project_id": "de33dd86-3efc-42f9-b627-f204f069b312",
-  "r2_key": "a/v1/de33dd86-3efc-42f9-b627-f204f069b312/bcd7ae92-51c5-44b8-bf29-9b0a134f8cb7/sino-africaine-mali.jpg",
-  "size": 315704,
-  "url": "/__l5e/assets-v1/bcd7ae92-51c5-44b8-bf29-9b0a134f8cb7/sino-africaine-mali.jpg",
-  "version": 1
+  "url": "/__l5e/assets-v1/7189b6e4-7a1e-41f4-9fab-a09ee16965f0/sino-africaine-mali.jpg",
+  "r2_key": "a/v1/de33dd86-3efc-42f9-b627-f204f069b312/7189b6e4-7a1e-41f4-9fab-a09ee16965f0/sino-africaine-mali.jpg",
+  "original_filename": "sino-africaine-mali.jpg",
+  "size": 2249425,
+  "content_type": "image/png",
+  "created_at": "2026-09-17T13:53:37Z"
 }
