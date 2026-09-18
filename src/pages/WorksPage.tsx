@@ -7,6 +7,7 @@ import { ScrollTextReveal } from "@/components/clever/ScrollTextReveal";
 import { Button } from "@/components/ui/button";
 import { projects } from "@/data/projects";
 import { useReveal } from "@/hooks/useReveal";
+import { useLenis } from "@/hooks/useLenis";
 
 const WorksPage = () => {
   const heading = useReveal<HTMLDivElement>();
