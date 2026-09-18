@@ -40,13 +40,8 @@ const un3 = { url: un3Asset.url };
 const un4 = { url: un4Asset.url };
 const un5 = { url: un5Asset.url };
 const un6 = { url: un6Asset.url };
-import buizAiVideo from "@/assets/buiz-ai.mp4.asset.json";
 import madarAirPoster from "@/assets/madar-air-freshener.jpg.asset.json";
-const buizAi01 = { url: "/media/buiz-ai-01.png" };
-const buizAi02 = { url: "/media/buiz-ai-02.png" };
-const buizAi03 = { url: "/media/buiz-ai-03.png" };
-const buizAi04 = { url: "/media/buiz-ai-04.png" };
-const buizAi05 = { url: "/media/buiz-ai-05.png" };
+import unMainAsset from "@/assets/un-main.jpg.asset.json";
 
 export type Project = {
   slug: string;
@@ -63,19 +58,6 @@ export type Project = {
 };
 
 export const projects: Project[] = [
-  {
-    slug: "buiz-ai-experimental",
-    title: "Buiz Ai\nEXPERIMENTAL",
-    tags: ["Motion Design", "Experimental"],
-    image: buizAi01.url,
-    video: buizAiVideo.url,
-    client: "Buiz.ai",
-    year: "2026",
-    role: "Art Direction, Motion Design",
-    description:
-      "An experimental motion design project created for the Buiz.ai experience.",
-    gallery: [buizAi01.url, buizAi02.url, buizAi03.url, buizAi04.url, buizAi05.url],
-  },
   {
     slug: "project-a",
     title: "ADS Mobility",
@@ -175,7 +157,7 @@ export const projects: Project[] = [
     slug: "unhcr-refugees-short-film",
     title: "UNHCR\nRefugees short film",
     tags: ["Documentary", "Film"],
-    image: un1.url,
+    image: unMainAsset.url,
     link: "https://vimeo.com/995526353?fl=pl&fe=sh",
     client: "UNHCR",
     year: "2025",
