@@ -98,7 +98,7 @@ export const projects: Project[] = [
     role: "Direction, Production",
     description:
       "An advertising campaign for Jet7x, an energetic staging around the iconic drink.",
-    gallery: [jet7xPreview.url],
+    gallery: [jet7xShot1.url, jet7xShot2.url, jet7xShot3.url, jet7xShot4.url, jet7xShot5.url],
   },
   {
     slug: "champions-proprete",
