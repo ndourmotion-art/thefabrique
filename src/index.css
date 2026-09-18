@@ -322,12 +322,12 @@
 }
 .work-project__shade {
   z-index: 2;
-  background: linear-gradient(180deg, hsl(var(--foreground) / 0.25), transparent 28%, transparent 58%, hsl(var(--foreground) / 0.45));
-  opacity: 0.42;
+  background: linear-gradient(180deg, hsl(var(--foreground) / 0.45), transparent 32%, transparent 50%, hsl(var(--foreground) / 0.65));
+  opacity: 0.68;
   transition: opacity 450ms ease;
 }
 .work-project:hover .work-project__shade {
-  opacity: 0.72;
+  opacity: 0.85;
 }
 .work-project__view {
   z-index: 3;
@@ -350,14 +350,9 @@
   will-change: left, top, transform;
 }
 .work-project__view.is-visible {
-  animation: work-pop 440ms cubic-bezier(0.34, 1.56, 0.64, 1) both;
-}
-@keyframes work-pop {
-  0%   { transform: translate(-50%, -50%) scale(0.3); opacity: 0; }
-  55%  { transform: translate(-50%, -50%) scale(1.14); opacity: 1; }
-  75%  { transform: translate(-50%, -50%) scale(0.94); }
-  90%  { transform: translate(-50%, -50%) scale(1.03); }
-  100% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+  transition: opacity 220ms ease, transform 220ms ease;
 }
 @media (prefers-reduced-motion: reduce) {
   .work-project__view.is-visible {
