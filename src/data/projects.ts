@@ -61,6 +61,7 @@ export type Project = {
   tags: string[];
   image: string;
   video?: string;
+  videoAspect?: string; // native aspect ratio of the hover video, e.g. "9 / 16"
   link?: string;
   client: string;
   year: string;
