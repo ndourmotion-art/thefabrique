@@ -59,19 +59,6 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    slug: "buiz-ai-experimental",
-    title: "Buiz Ai\nEXPERIMENTAL",
-    tags: ["Motion Design", "Experimental"],
-    image: buizAi01.url,
-    video: buizAiVideo.url,
-    client: "Buiz.ai",
-    year: "2026",
-    role: "Art Direction, Motion Design",
-    description:
-      "An experimental motion design project created for the Buiz.ai experience.",
-    gallery: [buizAi01.url, buizAi02.url, buizAi03.url, buizAi04.url, buizAi05.url],
-  },
-  {
     slug: "project-a",
     title: "ADS Mobility",
     tags: ["Advertising", "Art Direction"],
@@ -170,7 +157,7 @@ export const projects: Project[] = [
     slug: "unhcr-refugees-short-film",
     title: "UNHCR\nRefugees short film",
     tags: ["Documentary", "Film"],
-    image: un1.url,
+    image: unMainAsset.url,
     link: "https://vimeo.com/995526353?fl=pl&fe=sh",
     client: "UNHCR",
     year: "2025",
