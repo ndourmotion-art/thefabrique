@@ -95,13 +95,13 @@ export const ContactCTA = () => {
             </button>
           </div>
 
-          <div className="pt-4 text-sm md:text-base font-medium text-foreground/80 flex flex-wrap items-center gap-x-6 gap-y-2">
-            <span>Send us an email</span>
-            <a href="mailto:hello@cleverafrica.com" className="font-semibold text-foreground hover:text-primary transition-colors">
-              hello@cleverafrica.com
+          <div className="pt-4 text-base md:text-lg font-semibold text-foreground flex flex-wrap items-center gap-x-6 gap-y-2">
+            <span className="text-lg md:text-xl">Send us an email</span>
+            <a href="mailto:hello@thefabrique.rw" className="text-lg md:text-xl font-bold text-foreground hover:text-primary transition-colors">
+              hello@thefabrique.rw
             </a>
             <span className="text-foreground/30">·</span>
-            <span className="font-semibold text-foreground">+250 792 873 396</span>
+            <span className="text-lg md:text-xl font-bold text-foreground">+250 792 873 396</span>
           </div>
         </form>
       </div>
