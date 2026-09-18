@@ -1,4 +1,5 @@
 import { useCallback, useState } from "react";
+import { useLenis } from "@/hooks/useLenis";
 import { Nav } from "@/components/clever/Nav";
 import { Hero } from "@/components/clever/Hero";
 import { FeaturedWork } from "@/components/clever/FeaturedWork";
@@ -16,6 +17,7 @@ const Index = () => {
   const [introState, setIntroState] = useState<"waiting" | "revealing" | "complete">("waiting");
   const revealHomepage = useCallback(() => setIntroState("revealing"), []);
   const completeIntro = useCallback(() => setIntroState("complete"), []);
+  useLenis(introState === "complete");
 
   return (
     <>

@@ -31,7 +31,12 @@ export const Nav = () => {
     const el = document.getElementById(id);
     if (!el) return;
     const targetY = el.getBoundingClientRect().top + window.scrollY - 80;
-    window.scrollTo(0, targetY);
+    const lenis = (window as unknown as { __lenis?: { scrollTo: (t: number, o?: { offset?: number }) => void } }).__lenis;
+    if (lenis) {
+      lenis.scrollTo(targetY);
+    } else {
+      window.scrollTo({ top: targetY, behavior: "smooth" });
+    }
   };
 
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
@@ -61,7 +66,9 @@ export const Nav = () => {
           onClick={(e) => {
             if (location.pathname === "/") {
               e.preventDefault();
-              window.scrollTo({ top: 0, behavior: "smooth" });
+              const lenis = (window as unknown as { __lenis?: { scrollTo: (t: number) => void } }).__lenis;
+              if (lenis) lenis.scrollTo(0);
+              else window.scrollTo({ top: 0, behavior: "smooth" });
             }
           }}
           className="flex items-center gap-2 shrink-0"
