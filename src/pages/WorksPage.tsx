@@ -11,6 +11,7 @@ import { useLenis } from "@/hooks/useLenis";
 
 const WorksPage = () => {
   const heading = useReveal<HTMLDivElement>();
+  useLenis(true);
 
   useEffect(() => {
     window.history.scrollRestoration = "manual";
