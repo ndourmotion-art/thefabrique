@@ -40,13 +40,8 @@ const un3 = { url: un3Asset.url };
 const un4 = { url: un4Asset.url };
 const un5 = { url: un5Asset.url };
 const un6 = { url: un6Asset.url };
-import buizAiVideo from "@/assets/buiz-ai.mp4.asset.json";
 import madarAirPoster from "@/assets/madar-air-freshener.jpg.asset.json";
-const buizAi01 = { url: "/media/buiz-ai-01.png" };
-const buizAi02 = { url: "/media/buiz-ai-02.png" };
-const buizAi03 = { url: "/media/buiz-ai-03.png" };
-const buizAi04 = { url: "/media/buiz-ai-04.png" };
-const buizAi05 = { url: "/media/buiz-ai-05.png" };
+import unMainAsset from "@/assets/un-main.jpg.asset.json";
 
 export type Project = {
   slug: string;
