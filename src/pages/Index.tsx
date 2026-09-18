@@ -17,6 +17,7 @@ const Index = () => {
   const [introState, setIntroState] = useState<"waiting" | "revealing" | "complete">("waiting");
   const revealHomepage = useCallback(() => setIntroState("revealing"), []);
   const completeIntro = useCallback(() => setIntroState("complete"), []);
+  useLenis(introState === "complete");
 
   return (
     <>
