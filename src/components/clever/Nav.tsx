@@ -31,7 +31,12 @@ export const Nav = () => {
     const el = document.getElementById(id);
     if (!el) return;
     const targetY = el.getBoundingClientRect().top + window.scrollY - 80;
-    window.scrollTo(0, targetY);
+    const lenis = (window as unknown as { __lenis?: { scrollTo: (t: number, o?: { offset?: number }) => void } }).__lenis;
+    if (lenis) {
+      lenis.scrollTo(targetY);
+    } else {
+      window.scrollTo({ top: targetY, behavior: "smooth" });
+    }
   };
 
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
