@@ -74,15 +74,19 @@ const ProjectCard = ({
 
           {vimeoId && hovered && (
             <div className="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
-              <iframe
-                ref={frameRef}
-                src={`https://player.vimeo.com/video/${vimeoId}?background=1&autoplay=1&muted=1&loop=1&autopause=0&badge=0&byline=0&title=0&portrait=0&controls=0#t=0s`}
-                title=""
-                tabIndex={-1}
-                allow="autoplay"
-                className="absolute left-1/2 top-1/2 h-[110%] w-[110%] -translate-x-1/2 -translate-y-1/2 border-0"
-                style={{ minWidth: "177.78%", minHeight: "100%" }}
-              />
+              <div
+                className="absolute left-1/2 top-1/2 w-full -translate-x-1/2 -translate-y-1/2"
+                style={{ aspectRatio: "16 / 9" }}
+              >
+                <iframe
+                  ref={frameRef}
+                  src={`https://player.vimeo.com/video/${vimeoId}?background=1&autoplay=1&muted=1&loop=1&autopause=0&badge=0&byline=0&title=0&portrait=0&controls=0#t=0s`}
+                  title=""
+                  tabIndex={-1}
+                  allow="autoplay"
+                  className="h-full w-full border-0"
+                />
+              </div>
             </div>
           )}
 
