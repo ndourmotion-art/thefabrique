@@ -39,10 +39,10 @@ export const Hero = ({ mediaVisible = true, contentVisible = true }: HeroProps) 
 
           <div className="absolute inset-0 flex flex-col justify-center px-6 md:px-14">
             <h1 className="hero-opening__title font-display uppercase tracking-tight leading-[0.9]" data-no-reveal>
-              <span className="hero-opening__line block font-sans font-black text-background text-[clamp(2.6rem,8vw,6.5rem)] drop-shadow-[0_2px_10px_rgba(0,0,0,0.35)]">
+              <span className="hero-opening__line block font-sans font-black text-background text-[clamp(1.7rem,4.6vw,3.4rem)] drop-shadow-[0_2px_10px_rgba(0,0,0,0.35)]">
                 <WrittenLine text="Creative" start={390} />
               </span>
-              <span className="hero-opening__line hero-opening__line--second block font-sans font-black text-accent text-[clamp(2.6rem,8vw,6.5rem)] drop-shadow-[0_2px_10px_rgba(0,0,0,0.35)]">
+              <span className="hero-opening__line hero-opening__line--second block font-sans font-black text-accent text-[clamp(1.7rem,4.6vw,3.4rem)] drop-shadow-[0_2px_10px_rgba(0,0,0,0.35)]">
                 <WrittenLine text="Powerhouse" start={730} />
               </span>
             </h1>

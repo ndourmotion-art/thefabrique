@@ -1,4 +1,5 @@
 import { useCallback, useState } from "react";
+import { useLenis } from "@/hooks/useLenis";
 import { Nav } from "@/components/clever/Nav";
 import { Hero } from "@/components/clever/Hero";
 import { FeaturedWork } from "@/components/clever/FeaturedWork";
