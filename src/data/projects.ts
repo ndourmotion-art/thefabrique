@@ -164,7 +164,7 @@ export const projects: Project[] = [
     role: "Direction, Production",
     description:
       "A short film produced for UNHCR, telling the stories of refugees with humanity and dignity.",
-    gallery: [un1.url, un3.url, un4.url, un5.url, un6.url],
+    gallery: [unAllPeople.url, unCallin.url, unLybia.url, unRefugies.url, unMain2.url],
   },
 ];
 
