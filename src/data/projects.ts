@@ -61,6 +61,7 @@ export type Project = {
   tags: string[];
   image: string;
   video?: string;
+  videoAspect?: string; // native aspect ratio of the hover video, e.g. "9 / 16"
   link?: string;
   client: string;
   year: string;
@@ -94,6 +95,7 @@ export const projects: Project[] = [
     tags: ["Advertising", "Motion"],
     image: jet7xPreview.url,
     link: "https://vimeo.com/1130287469?fl=pl&fe=sh",
+    videoAspect: "9 / 16",
     client: "Jet7x",
     year: "2025",
     role: "Direction, Production",
