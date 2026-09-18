@@ -95,6 +95,7 @@ export const projects: Project[] = [
     tags: ["Advertising", "Motion"],
     image: jet7xPreview.url,
     link: "https://vimeo.com/1130287469?fl=pl&fe=sh",
+    videoAspect: "9 / 16",
     client: "Jet7x",
     year: "2025",
     role: "Direction, Production",
