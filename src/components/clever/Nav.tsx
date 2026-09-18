@@ -66,7 +66,9 @@ export const Nav = () => {
           onClick={(e) => {
             if (location.pathname === "/") {
               e.preventDefault();
-              window.scrollTo({ top: 0, behavior: "smooth" });
+              const lenis = (window as unknown as { __lenis?: { scrollTo: (t: number) => void } }).__lenis;
+              if (lenis) lenis.scrollTo(0);
+              else window.scrollTo({ top: 0, behavior: "smooth" });
             }
           }}
           className="flex items-center gap-2 shrink-0"
