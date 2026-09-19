@@ -3,9 +3,9 @@ import { Link } from "react-router-dom";
 const logo = "/media/fabrique-logo.png";
 
 const socials = [
-  { label: "LinkedIn", href: "https://www.linkedin.com" },
-  { label: "Facebook", href: "https://www.facebook.com" },
-  { label: "Instagram", href: "https://www.instagram.com" },
+  { label: "LinkedIn", abbr: "LI", href: "https://www.linkedin.com" },
+  { label: "Facebook", abbr: "FB", href: "https://www.facebook.com" },
+  { label: "Instagram", abbr: "IG", href: "https://www.instagram.com" },
 ];
 
 const legalLinks = [
@@ -15,42 +15,80 @@ const legalLinks = [
 
 export const Footer = () => {
   return (
-    <footer className="bg-background text-foreground border-t border-foreground/10">
-      <div className="mx-auto max-w-[1400px] px-6 lg:px-10 py-10 md:py-12">
-        <div className="flex flex-col md:flex-row md:items-center justify-between gap-8">
-          <img src={logo} alt="The FABRIQUE" className="h-16 w-auto" />
+    <footer className="bg-background text-foreground">
+      <div className="mx-auto max-w-[1400px] px-6 lg:px-10 py-12 md:py-16">
+        {/* Top Divider */}
+        <div className="h-px w-full bg-foreground mb-10 md:mb-12" />
 
-          <nav className="flex flex-col items-center gap-2" aria-label="Legal">
-            {legalLinks.map(({ label, to }) => (
-              <Link
-                key={label}
-                to={to}
-                className="text-base font-bold text-foreground underline underline-offset-4 transition-colors hover:text-primary"
-              >
-                {label}
-              </Link>
-            ))}
-          </nav>
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-12">
+          {/* Left: Logo Section */}
+          <div className="md:col-span-5 flex flex-col justify-between">
+            <img
+              src={logo}
+              alt="The FABRIQUE"
+              className="h-14 md:h-16 w-auto"
+            />
+            <p className="mt-6 text-sm text-foreground/50 max-w-xs leading-relaxed">
+              A creative powerhouse for brands, organizations, and startups of
+              all sizes.
+            </p>
+          </div>
 
-          <div className="flex flex-col items-start gap-2 md:items-end">
-            <nav className="flex flex-col items-start gap-2 md:items-end" aria-label="Social media">
-              {socials.map(({ label, href }) => (
+          {/* Middle: Legal */}
+          <div className="md:col-span-3 md:border-l md:border-foreground/10 md:pl-8">
+            <h4 className="text-[10px] font-bold uppercase tracking-[0.2em] text-primary mb-6">
+              Legal
+            </h4>
+            <ul className="space-y-4">
+              {legalLinks.map(({ label, to }) => (
+                <li key={label}>
+                  <Link
+                    to={to}
+                    className="text-sm font-medium text-foreground transition-colors duration-200 border-b border-transparent hover:border-[hsl(var(--accent))] hover:text-primary"
+                  >
+                    {label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Right: Socials */}
+          <div className="md:col-span-4 md:border-l md:border-foreground/10 md:pl-8">
+            <h4 className="text-[10px] font-bold uppercase tracking-[0.2em] text-primary mb-6">
+              Connect
+            </h4>
+            <div className="flex flex-col space-y-4">
+              {socials.map(({ label, abbr, href }) => (
                 <a
                   key={label}
                   href={href}
                   target="_blank"
                   rel="noreferrer"
-                  aria-label={label}
-                  title={label}
-                  className="text-base font-bold text-foreground transition-colors hover:text-primary"
+                  className="group flex items-center justify-between text-sm font-medium text-foreground"
                 >
-                  {label}
+                  <span className="group-hover:text-primary transition-colors">
+                    {label}
+                  </span>
+                  <span className="h-px flex-grow mx-4 bg-foreground/10 group-hover:bg-[hsl(var(--accent))] transition-colors" />
+                  <span className="text-[10px] font-bold text-foreground/40 group-hover:text-primary transition-colors">
+                    {abbr}
+                  </span>
                 </a>
               ))}
-            </nav>
-            <div className="text-sm font-medium text-foreground/60">
-              © 2026 The Fabrique. All rights reserved.
             </div>
+          </div>
+        </div>
+
+        {/* Bottom Bar */}
+        <div className="mt-16 md:mt-20 pt-8 border-t border-foreground/10 flex flex-col md:flex-row justify-between items-center gap-4">
+          <p className="text-[11px] font-medium text-foreground/40 uppercase tracking-widest">
+            © 2026 The Fabrique. All rights reserved.
+          </p>
+          <div className="flex gap-6">
+            <div className="w-2 h-2 rounded-full bg-[hsl(var(--accent))]" />
+            <div className="w-2 h-2 rounded-full bg-primary" />
+            <div className="w-2 h-2 rounded-full bg-foreground" />
           </div>
         </div>
       </div>
