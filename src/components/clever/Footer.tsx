@@ -16,35 +16,32 @@ const legalLinks = [
 export const Footer = () => {
   return (
     <footer className="bg-background text-foreground">
-      <div className="mx-auto max-w-[1400px] px-6 lg:px-10 py-12 md:py-16">
-        {/* Top Divider */}
-        <div className="h-px w-full bg-foreground mb-10 md:mb-12" />
+      <div className="mx-auto max-w-[1600px] px-6 py-5 md:px-10 lg:px-16">
+        <div className="h-px w-full bg-foreground" />
 
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-12">
-          {/* Left: Logo Section */}
-          <div className="md:col-span-5 flex flex-col justify-between">
+        <div className="grid grid-cols-1 gap-12 py-12 md:min-h-[270px] md:grid-cols-12 md:gap-0 md:py-11">
+          <div className="flex flex-col items-start md:col-span-5">
             <img
               src={logo}
               alt="The FABRIQUE"
-              className="h-14 md:h-16 w-auto object-contain"
+              className="h-auto w-[165px] object-contain object-left"
             />
-            <p className="mt-6 text-sm text-foreground/50 max-w-xs leading-relaxed">
+            <p className="mt-8 max-w-[320px] text-sm font-normal leading-relaxed text-foreground/45">
               A creative powerhouse for brands, organizations, and startups of
               all sizes.
             </p>
           </div>
 
-          {/* Middle: Legal */}
-          <div className="md:col-span-3 md:border-l md:border-foreground/10 md:pl-8">
-            <h4 className="text-[10px] font-bold uppercase tracking-[0.2em] text-primary mb-6">
+          <div className="md:col-span-5 md:pl-8">
+            <h4 className="mb-7 text-[10px] font-bold uppercase tracking-[0.2em] text-primary">
               Legal
             </h4>
-            <ul className="space-y-4">
+            <ul className="space-y-5">
               {legalLinks.map(({ label, to }) => (
                 <li key={label}>
                   <Link
                     to={to}
-                    className="text-sm font-medium text-foreground transition-colors duration-200 border-b border-transparent hover:border-[hsl(var(--accent))] hover:text-primary"
+                    className="text-sm font-normal text-foreground transition-colors duration-200 hover:text-primary"
                   >
                     {label}
                   </Link>
@@ -53,19 +50,18 @@ export const Footer = () => {
             </ul>
           </div>
 
-          {/* Right: Socials */}
-          <div className="md:col-span-4 md:border-l md:border-foreground/10 md:pl-8">
-            <h4 className="text-[10px] font-bold uppercase tracking-[0.2em] text-primary mb-6">
+          <div className="md:col-span-2 md:justify-self-end md:pr-4">
+            <h4 className="mb-7 text-[10px] font-bold uppercase tracking-[0.2em] text-primary">
               Connect
             </h4>
-            <ul className="space-y-4">
+            <ul className="space-y-5">
               {socials.map(({ label, href }) => (
                 <li key={label}>
                   <a
                     href={href}
                     target="_blank"
                     rel="noreferrer"
-                    className="group inline-block text-sm font-medium text-foreground transition-colors duration-200 border-b border-foreground/15 hover:border-[hsl(var(--accent))] hover:text-primary"
+                    className="inline-block border-b border-foreground/20 text-sm font-normal text-foreground transition-colors duration-200 hover:border-accent hover:text-primary"
                   >
                     {label}
                   </a>
@@ -75,9 +71,8 @@ export const Footer = () => {
           </div>
         </div>
 
-        {/* Bottom Bar */}
-        <div className="mt-16 md:mt-20 pt-8 border-t border-foreground/10 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-[11px] font-medium text-foreground/40 uppercase tracking-widest">
+        <div className="border-t border-foreground/10 py-7">
+          <p className="text-[10px] font-medium uppercase tracking-widest text-foreground/35">
             © 2026 The Fabrique. All rights reserved.
           </p>
         </div>
