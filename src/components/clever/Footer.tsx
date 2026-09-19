@@ -3,9 +3,9 @@ import { Link } from "react-router-dom";
 const logo = "/media/fabrique-logo.png";
 
 const socials = [
-  { label: "LinkedIn", abbr: "LI", href: "https://www.linkedin.com" },
-  { label: "Facebook", abbr: "FB", href: "https://www.facebook.com" },
-  { label: "Instagram", abbr: "IG", href: "https://www.instagram.com" },
+  { label: "LinkedIn", href: "https://www.linkedin.com" },
+  { label: "Facebook", href: "https://www.facebook.com" },
+  { label: "Instagram", href: "https://www.instagram.com" },
 ];
 
 const legalLinks = [
@@ -58,25 +58,20 @@ export const Footer = () => {
             <h4 className="text-[10px] font-bold uppercase tracking-[0.2em] text-primary mb-6">
               Connect
             </h4>
-            <div className="flex flex-col space-y-4">
-              {socials.map(({ label, abbr, href }) => (
-                <a
-                  key={label}
-                  href={href}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="group flex items-center justify-between text-sm font-medium text-foreground"
-                >
-                  <span className="group-hover:text-primary transition-colors">
+            <ul className="space-y-4">
+              {socials.map(({ label, href }) => (
+                <li key={label}>
+                  <a
+                    href={href}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="group inline-block text-sm font-medium text-foreground transition-colors duration-200 border-b border-foreground/15 hover:border-[hsl(var(--accent))] hover:text-primary"
+                  >
                     {label}
-                  </span>
-                  <span className="h-px flex-grow mx-4 bg-foreground/10 group-hover:bg-[hsl(var(--accent))] transition-colors" />
-                  <span className="text-[10px] font-bold text-foreground/40 group-hover:text-primary transition-colors">
-                    {abbr}
-                  </span>
-                </a>
+                  </a>
+                </li>
               ))}
-            </div>
+            </ul>
           </div>
         </div>
 
