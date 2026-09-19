@@ -3,9 +3,9 @@ import { Link } from "react-router-dom";
 const logo = "/media/fabrique-logo.png";
 
 const socials = [
-  { label: "LinkedIn", abbr: "LI", href: "https://www.linkedin.com" },
-  { label: "Facebook", abbr: "FB", href: "https://www.facebook.com" },
-  { label: "Instagram", abbr: "IG", href: "https://www.instagram.com" },
+  { label: "LinkedIn", href: "https://www.linkedin.com" },
+  { label: "Facebook", href: "https://www.facebook.com" },
+  { label: "Instagram", href: "https://www.instagram.com" },
 ];
 
 const legalLinks = [
