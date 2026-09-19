@@ -26,7 +26,7 @@ export const Footer = () => {
             <img
               src={logo}
               alt="The FABRIQUE"
-              className="h-14 md:h-16 w-auto"
+              className="h-14 md:h-16 w-auto object-contain"
             />
             <p className="mt-6 text-sm text-foreground/50 max-w-xs leading-relaxed">
               A creative powerhouse for brands, organizations, and startups of
@@ -85,11 +85,6 @@ export const Footer = () => {
           <p className="text-[11px] font-medium text-foreground/40 uppercase tracking-widest">
             © 2026 The Fabrique. All rights reserved.
           </p>
-          <div className="flex gap-6">
-            <div className="w-2 h-2 rounded-full bg-[hsl(var(--accent))]" />
-            <div className="w-2 h-2 rounded-full bg-primary" />
-            <div className="w-2 h-2 rounded-full bg-foreground" />
-          </div>
         </div>
       </div>
     </footer>
