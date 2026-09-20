@@ -11,6 +11,7 @@ const jet7xShot4 = { url: "/media/Juice_only.jpg" };
 const jet7xShot5 = { url: "/media/Lionhhead_J7x-2.jpg" };
 const championsPreview = { url: "/media/les-champions.jpg" };
 const noelMadarPreview = { url: "/media/noel-madar.jpg" };
+const nouraPartyPreview = { url: "/media/noura-party-cover.jpeg" };
 const sinoMaliPreview = { url: "/media/dougabougou.jpg" };
 const sino1 = { url: "/media/sino-1.jpg" };
 const sino2 = { url: "/media/sino-2.jpg" };
@@ -106,6 +107,19 @@ export const projects: Project[] = [
     description:
       "A festive campaign for Madar blending light, sparkle, and the magic of Christmas.",
     gallery: [noelMadarPreview.url],
+  },
+  {
+    slug: "noura-party",
+    title: "Noura Party",
+    tags: ["Advertising", "Production"],
+    image: nouraPartyPreview.url,
+    link: "https://vimeo.com/221851137",
+    client: "Noura",
+    year: "2017",
+    role: "Direction, Production",
+    description:
+      "A colorful product film for Noura, bringing energy and playful motion to an everyday cleaning moment.",
+    gallery: [nouraPartyPreview.url],
   },
   {
     slug: "madar-air-freshener",
