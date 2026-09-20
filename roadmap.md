@@ -22,3 +22,4 @@
 - [x] Replace the footer banner, correct Made with Passion, simplify project captions, restyle hero buttons, and add social icons
 - [x] Refine the hero heading, replace footer social icons with vertical text links, and add the Terms and Policies page
 - [x] Bundle project imagery for GitHub and Render hosting; use accent green for the project cursor and Passion
+- [x] Add Noura Party after Christmas at Madar with its Vimeo film and supplied cover
