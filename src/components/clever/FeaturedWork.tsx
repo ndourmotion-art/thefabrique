@@ -171,7 +171,7 @@ export const FeaturedWork = () => {
               key={p.title}
               project={p}
               index={i}
-              featured={i === projects.length - 1}
+              featured={i === 0 || i === projects.length - 1}
             />
           ))}
         </div>
