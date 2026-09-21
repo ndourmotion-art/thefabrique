@@ -124,6 +124,14 @@
   .text-display-md {
     font-size: clamp(2rem, 5vw, 4.5rem);
   }
+  .portfolio-display {
+    font-family: 'Space Grotesk', system-ui, sans-serif;
+    letter-spacing: 0;
+  }
+  .portfolio-body {
+    font-family: 'DM Sans', system-ui, sans-serif;
+    letter-spacing: 0;
+  }
 }
 
 /* Opening sequence — a slow cinematic logo approach, dissolve, then the page moves forward. */
