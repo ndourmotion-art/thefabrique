@@ -25,4 +25,4 @@
 - [x] Add Noura Party after Christmas at Madar with its Vimeo film and supplied cover
 
 ## Open
-- [ ] Add a modern image-only masonry portfolio gallery to the All Works page
+- [x] Add a modern image-only masonry portfolio gallery to the All Works page
