@@ -127,7 +127,7 @@ const WorksPage = () => {
             </p>
           </div>
 
-          <div className="columns-1 gap-6 md:columns-2 md:gap-8 xl:columns-3">
+          <div className="columns-1 gap-6 md:columns-2 md:gap-8">
             {gallery.map((item, index) => (
               <article key={item.src} className="mb-6 break-inside-avoid md:mb-8">
                 <button
