@@ -14,9 +14,9 @@ import { useReveal } from "@/hooks/useReveal";
 import { useLenis } from "@/hooks/useLenis";
 
 const gallery = [
+  { src: "/media/portfolio/ads-mobility-02.jpg", title: "ADS Mobility", type: "Campaign design" },
   { src: "/media/portfolio/ads-mobility-01.jpg", title: "ADS Mobility", type: "Campaign design" },
   { src: "/media/portfolio/micha-glace-01.jpg", title: "Micha Glace", type: "Character campaign" },
-  { src: "/media/portfolio/ads-mobility-02.jpg", title: "Zero Traffic", type: "Campaign design" },
   { src: "/media/portfolio/micha-glace-02.jpg", title: "ChocoVanille", type: "Visual identity" },
   { src: "/media/portfolio/micha-glace-03.jpg", title: "Micha at School", type: "Social campaign" },
   { src: "/media/portfolio/micha-glace-04.jpg", title: "Strawberry Micha", type: "Character campaign" },
@@ -72,12 +72,12 @@ const WorksPage = () => {
       </section>
 
       <section className="mx-auto max-w-[1600px] px-2 pb-24 md:px-4 md:pb-36">
-        <div className="grid gap-5 md:grid-cols-2 md:gap-8 xl:grid-cols-3">
+        <div className="grid gap-5 md:grid-cols-2 md:gap-8">
           {projects.map((project, index) => (
             <Link
               key={project.slug}
               to={`/work/${project.slug}`}
-              className={`group block ${index === projects.length - 1 ? "md:col-span-2 xl:col-span-2" : ""}`}
+              className="group block"
             >
               <article className="h-full">
                 <div className="relative aspect-[16/11] overflow-hidden rounded-2xl bg-muted md:aspect-[16/10]">
@@ -127,9 +127,9 @@ const WorksPage = () => {
             </p>
           </div>
 
-          <div className="columns-1 gap-6 md:columns-2 md:gap-8">
+          <div className="grid grid-cols-1 items-start gap-6 md:grid-cols-2 md:gap-8">
             {gallery.map((item, index) => (
-              <article key={item.src} className="mb-6 break-inside-avoid md:mb-8">
+              <article key={item.src}>
                 <button
                   type="button"
                   onClick={() => setSelectedImage(index)}

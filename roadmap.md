@@ -26,3 +26,4 @@
 
 ## Open
 - [x] Add a modern image-only masonry portfolio gallery to the All Works page
+- [x] Use two-column video and visual grids on All Works; lead Visual Works with both ADS Mobility posters
