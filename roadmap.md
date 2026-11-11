@@ -1,5 +1,7 @@
 # Roadmap
 
+- [x] Add unique page metadata, canonical URLs, JSON-LD, sitemap and robots support; audit image alt descriptions and internal links.
+
 ## Done
 - [x] Fix Nav: remove white flash + hardcoded colors
 - [x] Translate all French text on the site to English

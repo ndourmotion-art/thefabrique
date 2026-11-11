@@ -9,15 +9,19 @@ import WorksPage from "./pages/WorksPage.tsx";
 import TermsAndPoliciesPage from "./pages/TermsAndPoliciesPage.tsx";
 import PrivacyPolicyPage from "./pages/PrivacyPolicyPage.tsx";
 import NotFound from "./pages/NotFound.tsx";
+import { HelmetProvider } from "react-helmet-async";
+import { PageSeo } from "./components/PageSeo";
 
 const queryClient = new QueryClient();
 
 const App = () => (
+  <HelmetProvider>
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <PageSeo />
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/works" element={<WorksPage />} />
@@ -30,6 +34,7 @@ const App = () => (
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
+  </HelmetProvider>
 );
 
 export default App;

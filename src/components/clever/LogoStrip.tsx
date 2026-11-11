@@ -11,6 +11,8 @@ const logos = [
   "/logos/ue.png",
 ];
 
+const logoNames = ["ADEMAS", "ADS Autoroutes du Sénégal", "Embassy of the People's Republic of China", "Epiroc", "H&D Industries", "k2o.com", "Mali Ministry of Justice and Human Rights", "Pandorama", "AG Partners Publicis Africa", "European Union Delegation in Senegal"];
+
 export const LogoStrip = () => {
   const row = [...logos, ...logos];
   return (
@@ -20,7 +22,7 @@ export const LogoStrip = () => {
           <img
             key={i}
             src={src}
-            alt=""
+            alt={i < logos.length ? `${logoNames[i]} logo` : ""}
             className="h-10 md:h-14 w-auto opacity-60 grayscale transition-opacity duration-300 hover:opacity-100 hover:grayscale-0 flex-shrink-0"
             loading="lazy"
           />

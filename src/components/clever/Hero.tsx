@@ -35,7 +35,7 @@ export const Hero = ({ mediaVisible = true, contentVisible = true }: HeroProps) 
         <div className="hero-opening__media relative aspect-[4/3] md:aspect-[16/10] w-full overflow-hidden rounded-2xl bg-muted">
           <img
             src={heroImage}
-            alt="Clever Africa hero"
+            alt="Man seated in a blue chair in The Fabrique's creative agency campaign"
             className="absolute inset-0 h-full w-full object-cover"
           />
 

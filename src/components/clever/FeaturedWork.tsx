@@ -4,6 +4,7 @@ import { ArrowUpRight } from "lucide-react";
 import { useReveal } from "@/hooks/useReveal";
 import { projects, type Project } from "@/data/projects";
 import { Button } from "@/components/ui/button";
+import { imageDescription } from "@/data/imageDescriptions";
 
 const getVimeoId = (link?: string) => {
   if (!link) return null;
@@ -67,7 +68,7 @@ const ProjectCard = ({
         <div className={`work-project__media ${featured ? "work-project__media--featured" : ""} relative overflow-hidden bg-muted`}>
           <img
             src={project.image}
-            alt={project.title}
+            alt={imageDescription(project.image, project.title)}
             loading={index < 2 ? "eager" : "lazy"}
             className="absolute inset-0 h-full w-full object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-[1.025]"
           />

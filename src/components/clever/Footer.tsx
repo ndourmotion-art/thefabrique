@@ -30,6 +30,9 @@ export const Footer = () => {
               A creative powerhouse for brands, organizations, and startups of
               all sizes.
             </p>
+            <Link to="/works" className="mt-4 text-sm text-foreground underline underline-offset-4 hover:text-primary">
+              All works
+            </Link>
           </div>
 
           <div className="md:col-span-5 md:pl-8">

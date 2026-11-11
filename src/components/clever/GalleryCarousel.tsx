@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useState } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import { imageDescription } from "@/data/imageDescriptions";
 
 type Props = {
   images: string[];
@@ -38,7 +39,7 @@ export const GalleryCarousel = ({ images, title }: Props) => {
               <div className="flex items-center justify-center rounded-2xl bg-muted overflow-hidden">
                 <img
                   src={src}
-                  alt={`${title} ${i + 1}`}
+                  alt={imageDescription(src, title)}
                   loading={i === 0 ? "eager" : "lazy"}
                   draggable={false}
                   className="w-auto max-w-full max-h-[80vh] object-contain select-none"

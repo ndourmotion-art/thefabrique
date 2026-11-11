@@ -6,6 +6,7 @@ import { useReveal } from "@/hooks/useReveal";
 import { ScrollTextReveal } from "@/components/clever/ScrollTextReveal";
 import { getProject, projects } from "@/data/projects";
 import { GalleryCarousel } from "@/components/clever/GalleryCarousel";
+import { imageDescription } from "@/data/imageDescriptions";
 
 const ProjectPage = () => {
   const { slug = "" } = useParams();
@@ -78,13 +79,13 @@ const ProjectPage = () => {
                 </div>
               ) : (
                 <div className="relative aspect-[4/3] md:aspect-[16/10] w-full overflow-hidden rounded-2xl bg-muted">
-                  <img src={project.image} alt={project.title} className="absolute inset-0 h-full w-full object-cover" />
+                  <img src={project.image} alt={imageDescription(project.image, project.title)} className="absolute inset-0 h-full w-full object-cover" />
                 </div>
               );
             })()
           ) : (
             <div className="relative aspect-[4/3] md:aspect-[16/10] w-full overflow-hidden rounded-2xl bg-muted">
-              <img src={project.image} alt={project.title} className="absolute inset-0 h-full w-full object-cover" />
+              <img src={project.image} alt={imageDescription(project.image, project.title)} className="absolute inset-0 h-full w-full object-cover" />
             </div>
           )}
         </div>
@@ -113,7 +114,7 @@ const ProjectPage = () => {
                   <div className="relative aspect-video overflow-hidden rounded-xl bg-muted">
                     <img
                       src={p.image}
-                      alt={p.title}
+                      alt={imageDescription(p.image, p.title)}
                       loading="lazy"
                       className="absolute inset-0 h-full w-full object-cover"
                     />
