@@ -47,6 +47,11 @@ export type Project = {
   role: string;
   description: string;
   gallery: string[];
+  seo?: {
+    title: string;
+    description: string;
+    lastModified?: string;
+  };
 };
 
 export const projects: Project[] = [
