@@ -83,7 +83,7 @@ const Card = ({ card }: { card: (typeof cards)[number] }) => {
     >
       <img
         src={card.poster}
-        alt={card.label}
+        alt=""
         loading="lazy"
         className="absolute inset-0 h-full w-full object-cover transition-opacity duration-500 group-hover:opacity-0"
       />

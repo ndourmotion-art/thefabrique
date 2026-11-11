@@ -10,6 +10,7 @@ import { Footer } from "@/components/clever/Footer";
 import { ScrollTextReveal } from "@/components/clever/ScrollTextReveal";
 import { Button } from "@/components/ui/button";
 import { projects } from "@/data/projects";
+import { imageDescription } from "@/data/imageDescriptions";
 import { useReveal } from "@/hooks/useReveal";
 import { useLenis } from "@/hooks/useLenis";
 
@@ -83,7 +84,7 @@ const WorksPage = () => {
                 <div className="relative aspect-[16/11] overflow-hidden rounded-2xl bg-muted md:aspect-[16/10]">
                   <img
                     src={project.image}
-                    alt={project.title}
+                    alt={imageDescription(project.image, project.title)}
                     loading={index < 3 || index === projects.length - 1 ? "eager" : "lazy"}
                     className="absolute inset-0 h-full w-full object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-[1.03]"
                   />

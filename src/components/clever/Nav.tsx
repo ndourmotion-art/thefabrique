@@ -5,7 +5,7 @@ const logo = logoAsset.url;
 import { cn } from "@/lib/utils";
 
 const links = [
-  { label: "Works", href: "#work" },
+  { label: "Works", href: "/works" },
   { label: "Services", href: "#services" },
   { label: "About", href: "#about" },
   { label: "Contact", href: "#contact" },
@@ -72,7 +72,7 @@ export const Nav = () => {
             }
           }}
           className="flex items-center gap-2 shrink-0"
-          aria-label="Cleverafrica home"
+          aria-label="The Fabrique home"
         >
           <img src={logo} alt="The FABRIQUE" className="h-14 md:h-16 w-auto" />
         </Link>
@@ -82,7 +82,7 @@ export const Nav = () => {
             {links.map((l) => (
               <a
                 key={l.href}
-                href={location.pathname === "/" ? l.href : `/${l.href}`}
+                href={l.href.startsWith("#") && location.pathname !== "/" ? `/${l.href}` : l.href}
                 onClick={(e) => handleClick(e, l.href)}
                 className="menu-link px-4 py-1.5 text-lg font-semibold text-foreground hover:text-foreground transition-colors rounded-full hover:bg-accent/15"
               >
@@ -115,7 +115,7 @@ export const Nav = () => {
           {links.map((l) => (
             <a
               key={l.href}
-              href={location.pathname === "/" ? l.href : `/${l.href}`}
+              href={l.href.startsWith("#") && location.pathname !== "/" ? `/${l.href}` : l.href}
               onClick={(e) => { setOpen(false); handleClick(e, l.href); }}
               className="menu-link px-4 py-3 rounded-xl text-lg font-medium hover:bg-accent/10"
             >
