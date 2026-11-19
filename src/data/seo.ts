@@ -1,6 +1,6 @@
 import { projects } from "./projects";
 
-export const SITE_URL = "https://thefabrique.rw";
+export const SITE_URL = "https://www.thefabrique.rw";
 
 export type SeoFields = {
   title: string;

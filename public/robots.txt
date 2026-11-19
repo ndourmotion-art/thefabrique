@@ -13,4 +13,4 @@ Allow: /
 User-agent: *
 Allow: /
 
-Sitemap: https://thefabrique.rw/sitemap.xml
+Sitemap: https://www.thefabrique.rw/sitemap.xml

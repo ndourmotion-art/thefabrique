@@ -16,9 +16,9 @@ describe("SEO rules", () => {
     }
   });
   it("uses self-referencing thefabrique.rw canonical URLs without trailing slashes", () => {
-    expect(canonicalUrl("/")).toBe("https://thefabrique.rw");
-    expect(canonicalUrl("/works/")).toBe("https://thefabrique.rw/works");
-    expect(canonicalUrl("/work/noura-party")).toBe("https://thefabrique.rw/work/noura-party");
+    expect(canonicalUrl("/")).toBe("https://www.thefabrique.rw");
+    expect(canonicalUrl("/works/")).toBe("https://www.thefabrique.rw/works");
+    expect(canonicalUrl("/work/noura-party")).toBe("https://www.thefabrique.rw/work/noura-party");
   });
   it("lists all public routes and every current project in the sitemap", () => {
     const sitemap = generateSitemap();
