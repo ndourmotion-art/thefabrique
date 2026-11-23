@@ -23,7 +23,6 @@
 - [x] Put Made in Passion on one extended line, enlarge the last work image, and add an all-works page with a centered View All Works button
 - [x] Replace the footer banner, correct Made with Passion, simplify project captions, restyle hero buttons, and add social icons
 - [x] Refine the hero heading, replace footer social icons with vertical text links, and add the Terms and Policies page
-- [x] Bundle project imagery for GitHub and Render hosting; use accent green for the project cursor and Passion
 - [x] Add Noura Party after Christmas at Madar with its Vimeo film and supplied cover
 
 ## Open
@@ -31,4 +30,3 @@
 - [x] Use two-column video and visual grids on All Works; lead Visual Works with both ADS Mobility posters
 
 ## Open
-- [ ] Render rewrite rule `/* -> /index.html` (Rewrite) so /works, /terms-and-policies, /privacy-policy and the 9 project pages stop returning 404 on www.thefabrique.rw. Blocked: needs the user's Render dashboard; no code change fixes it (Render ignores _redirects files).
