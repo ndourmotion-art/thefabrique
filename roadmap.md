@@ -29,3 +29,6 @@
 ## Open
 - [x] Add a modern image-only masonry portfolio gallery to the All Works page
 - [x] Use two-column video and visual grids on All Works; lead Visual Works with both ADS Mobility posters
+
+## Open
+- [ ] Render rewrite rule `/* -> /index.html` (Rewrite) so /works, /terms-and-policies, /privacy-policy and the 9 project pages stop returning 404 on www.thefabrique.rw. Blocked: needs the user's Render dashboard; no code change fixes it (Render ignores _redirects files).
