@@ -1,14 +1,15 @@
+import { lazy, Suspense } from "react";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import Index from "./pages/Index.tsx";
-import ProjectPage from "./pages/ProjectPage.tsx";
-import WorksPage from "./pages/WorksPage.tsx";
-import TermsAndPoliciesPage from "./pages/TermsAndPoliciesPage.tsx";
-import PrivacyPolicyPage from "./pages/PrivacyPolicyPage.tsx";
-import NotFound from "./pages/NotFound.tsx";
+const ProjectPage = lazy(() => import("./pages/ProjectPage.tsx"));
+const WorksPage = lazy(() => import("./pages/WorksPage.tsx"));
+const TermsAndPoliciesPage = lazy(() => import("./pages/TermsAndPoliciesPage.tsx"));
+const PrivacyPolicyPage = lazy(() => import("./pages/PrivacyPolicyPage.tsx"));
+const NotFound = lazy(() => import("./pages/NotFound.tsx"));
 import { HelmetProvider } from "react-helmet-async";
 import { PageSeo } from "./components/PageSeo";
 
@@ -22,6 +23,7 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <PageSeo />
+        <Suspense fallback={null}>
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/works" element={<WorksPage />} />
@@ -31,6 +33,7 @@ const App = () => (
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
+        </Suspense>
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
